@@ -1,0 +1,100 @@
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form__label {
+    font: normal normal normal 16px/19px "Montserrat";
+    letter-spacing: 0px;
+    color: #010101;
+    margin-bottom: 10px;
+}
+
+.form-select {
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #c5c5c5;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    height: 54px;
+    padding: 16px 20px;
+    padding-right: 40px;
+    color: #767676;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.002' height='7.173' viewBox='0 0 14.002 7.173'%3E%3Cpath id='free-icon-font-angle-small-down-3916864' d='M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21A1,1,0,0,0,5.29,9.62l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z' transform='translate(-4.999 -7.914)' fill='%231e1e1e'/%3E%3C/svg%3E%0A") no-repeat calc(100% - 20px) 50%;
+    &:focus {
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        border: 1px solid #c5c5c5;
+    }
+}
+
+.form-control {
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #c5c5c5;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    height: 54px;
+    &:focus {
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        border: 1px solid #c5c5c5;
+    }
+    &.search__icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.166' height='17.165' viewBox='0 0 17.166 17.165'%3E%3Cpath id='search' d='M16.924,15.914l-4.264-4.264a7.154,7.154,0,1,0-1.01,1.01l4.264,4.264a.714.714,0,1,0,1.01-1.01ZM7.134,12.848a5.714,5.714,0,1,1,5.714-5.714,5.714,5.714,0,0,1-5.714,5.714Z' transform='translate(0.032 0.032)' fill='%23085ca3'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) 50%;
+        padding-right: 40px !important;
+    }
+}
+
+textarea.form-control {
+    min-height: 218px;
+}
+
+.custom-file {
+    height: 54px;
+    &-input {
+        &:focus {
+            &~.custom-file-label {
+                border: 1px solid #c5c5c5;
+                box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+            }
+        }
+    }
+    &-label {
+        height: 54px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        border: 1px solid #c5c5c5;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        &::after {
+            content: "" !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20.752' viewBox='0 0 20 20.752'%3E%3Cpath id='free-icon-font-clip-3917548' d='M19.853,8.3a.864.864,0,0,0-1.222,0L9.215,17.754A4.322,4.322,0,1,1,3.1,11.641l9.119-9.156a2.593,2.593,0,1,1,3.668,3.667L6.77,15.308a.883.883,0,0,1-1.222,0,.864.864,0,0,1,0-1.222L13.666,5.93a.864.864,0,1,0-1.222-1.222L4.325,12.864a2.593,2.593,0,0,0,0,3.668,2.656,2.656,0,0,0,3.668,0l9.118-9.157A4.322,4.322,0,1,0,11,1.263L1.88,10.419a6.051,6.051,0,0,0,8.558,8.558l9.415-9.453a.864.864,0,0,0,0-1.226Z' transform='translate(-0.108 0.003)' fill='%231e1e1e'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            border: none;
+            background-color: transparent;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.registration {
+    &__form {}
+    &__button {
+        font: normal normal normal 18px/22px "Montserrat";
+        letter-spacing: 0px;
+        font-weight: 500;
+        color: #ffffff;
+        padding: 15px 22px;
+        background-color: #085ca3;
+        min-width: 220px;
+        border-radius: 0;
+        &:hover {
+            background-color: darken($color: #085ca3, $amount: 10);
+            color: #fff;
+        }
+    }
+}

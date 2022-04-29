@@ -1,0 +1,66 @@
+/* USER VARIABLES SECTION */
+
+:root {
+    --accent: orange;
+    --fontsize: 16px;
+    --textcolor: #333;
+    --lineheight: 1.65;
+    --userfont: roboto-st, sans-serif;
+    --systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder {
+    color: #666;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+input,
+textarea {
+    outline: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+    border-color: red;
+}
+
+input:required:valid,
+textarea:required:valid {
+    border-color: green;
+}
+
+body {
+    font-family: var(--userfont);
+    font-size: var(--fontsize);
+    line-height: var(--lineheight);
+    color: var(--textcolor);
+    min-width: 320px;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #f4f7fc;
+}
+
+#app {
+    display: inline-flex;
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@import "./_sidebar";
+@import "./_header";
+@import "./_content";
+@import "./_forms";
+@import './_table';
