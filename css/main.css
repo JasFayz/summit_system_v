@@ -79,6 +79,34 @@ main {
           flex-direction: column;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+
 .sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,6 +545,10 @@ main {
   border-top-left-radius: 4px;
 }
 
+.nav-tabs .main__tab_item .button {
+  color: #fff;
+}
+
 .nav-tabs .main__tab_link {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -579,11 +611,12 @@ main {
   letter-spacing: 0px;
   font-weight: 500;
   min-height: 54px;
-  width: 100%;
+  width: auto;
   border-radius: 10px;
   color: #085ca3;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  min-width: 180px;
 }
 
 .button:focus {
@@ -612,6 +645,39 @@ main {
   background: #ffcdcd;
 }
 
+.button__success {
+  color: white;
+  background-color: #00a87b !important;
+  border-color: #00a87b !important;
+}
+
+.button__success:hover {
+  color: white;
+  background-color: #008f68 !important;
+}
+
+.button__primary {
+  background-color: #085ca3;
+  border-color: #085ca3;
+  color: white;
+}
+
+.button__primary:hover {
+  color: white;
+  background-color: #074e8b;
+}
+
+.button__secondary {
+  background-color: #9f9f9f;
+  background-color: #9f9f9f;
+  color: white;
+}
+
+.button__secondary:hover {
+  color: white;
+  background-color: #929292;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -621,6 +687,12 @@ main {
   letter-spacing: 0px;
   color: #010101;
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .form-select {
@@ -659,8 +731,22 @@ main {
   border: 1px solid #c5c5c5;
 }
 
-.form-control.search__icon {
+.form-control.icon_search {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.166' height='17.165' viewBox='0 0 17.166 17.165'%3E%3Cpath id='search' d='M16.924,15.914l-4.264-4.264a7.154,7.154,0,1,0-1.01,1.01l4.264,4.264a.714.714,0,1,0,1.01-1.01ZM7.134,12.848a5.714,5.714,0,1,1,5.714-5.714,5.714,5.714,0,0,1-5.714,5.714Z' transform='translate(0.032 0.032)' fill='%23085ca3'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 50%;
+  padding-right: 40px !important;
+}
+
+.form-control.icon_plus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.227' height='20.227' viewBox='0 0 20.227 20.227'%3E%3Cpath id='plus_2_' data-name='plus (2)' d='M19.384,9.271H10.956V.843A.843.843,0,0,0,10.114,0h0a.843.843,0,0,0-.843.843V9.271H.843A.843.843,0,0,0,0,10.114H0a.843.843,0,0,0,.843.843H9.271v8.428a.843.843,0,0,0,.843.843h0a.843.843,0,0,0,.843-.843V10.956h8.428a.843.843,0,0,0,.843-.843h0A.843.843,0,0,0,19.384,9.271Z' fill='%231e1e1e'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 50%;
+  padding-right: 40px !important;
+}
+
+.form-control.icon_marker {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.11' height='24.002' viewBox='0 0 20.11 24.002'%3E%3Cg id='marker' transform='translate(-1.945 0.002)'%3E%3Cpath id='Path_10172' data-name='Path 10172' d='M12,6a4,4,0,1,0,4,4A4,4,0,0,0,12,6Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,12Z' fill='%231e1e1e'/%3E%3Cpath id='Path_10173' data-name='Path 10173' d='M12,24a5.271,5.271,0,0,1-4.311-2.2c-3.811-5.257-5.744-9.209-5.744-11.747a10.055,10.055,0,1,1,20.11,0c0,2.538-1.933,6.49-5.744,11.747A5.271,5.271,0,0,1,12,24ZM12,2.181a7.883,7.883,0,0,0-7.874,7.874c0,2.01,1.893,5.727,5.329,10.466a3.145,3.145,0,0,0,5.09,0c3.436-4.739,5.329-8.456,5.329-10.466A7.883,7.883,0,0,0,12,2.181Z' fill='%231e1e1e'/%3E%3C/g%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) 50%;
   padding-right: 40px !important;
@@ -710,6 +796,66 @@ textarea.form-control {
           transform: translateY(-50%);
 }
 
+.custom-control {
+  display: inline-block;
+  min-height: 1rem;
+  padding: 0;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.custom-control-input {
+  display: none;
+  position: absolute;
+}
+
+.custom-control-input:checked ~ .custom-control-label {
+  color: #085ca3;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #085ca3;
+  background-color: #085ca3;
+}
+
+.custom-control-input:checked ~ .custom-control-label::after {
+  content: "";
+}
+
+.custom-control-label {
+  padding-left: 30px;
+  color: #c0c0c0;
+}
+
+.custom-control-label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 2px solid #085ca3;
+  background-color: transparent;
+}
+
+.custom-control-label::after {
+  content: none;
+  position: absolute;
+  top: 6px;
+  left: 2px;
+  width: 15px;
+  height: 7px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  background-image: none;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-image: none !important;
+}
+
 .registration__button {
   font: normal normal normal 18px/22px "Montserrat";
   letter-spacing: 0px;
@@ -724,6 +870,79 @@ textarea.form-control {
 .registration__button:hover {
   background-color: #064172;
   color: #fff;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number_inc {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  padding: 0.2em;
+  border: none;
+}
+
+.number_inc:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.number_inc:active {
+  -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.number_inc svg {
+  pointer-events: none;
+}
+
+.number_dec {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  padding: 0.2em;
+  border: none;
+}
+
+.number_dec:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.number_dec:active {
+  -webkit-box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.number_dec svg {
+  pointer-events: none;
+}
+
+.input-group-prepend {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60px;
+          flex: 0 1 60px;
+}
+
+.input-group-text {
+  background: transparent;
+  border: none;
+}
+
+.input-group .form-control:not(:first-child) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .table__main th {
