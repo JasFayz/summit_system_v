@@ -4,7 +4,7 @@
 }
 
 .nav-tabs {
-    .main__tab {
+    & .main__tab {
         border-bottom: none;
         &_item {
             &:last-child {
@@ -37,6 +37,66 @@
                 font-weight: 600;
                 border-top-left-radius: 4px;
                 border-top-right-radius: 4px;
+            }
+        }
+    }
+    &.plan__tab {
+        border-bottom: 3px solid #085ca3;
+    }
+    & .plan__tab {
+        &_item {
+            flex: 0 0 110px;
+            &:nth-child(2) {
+                & .plan__tab_link {
+                    background-color: rgba($color: #085ca3, $alpha: 0.8);
+                    &.active {
+                        background-color: #085ca3;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                & .plan__tab_link {
+                    background-color: rgba($color: #085ca3, $alpha: 0.7);
+                    &.active {
+                        background-color: #085ca3;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                & .plan__tab_link {
+                    background-color: rgba($color: #085ca3, $alpha: 0.6);
+                    &.active {
+                        background-color: #085ca3;
+                    }
+                }
+            }
+            &:nth-child(5) {
+                & .plan__tab_link {
+                    background-color: rgba($color: #085ca3, $alpha: 0.5);
+                    &.active {
+                        background-color: #085ca3;
+                    }
+                }
+            }
+        }
+        &_link {
+            font: normal normal normal 16px/19px "Montserrat", sans-serif;
+            letter-spacing: 0px;
+            color: #ffffff;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 15px;
+            padding: 10px 25px;
+            background-color: rgba($color: #085ca3, $alpha: 0.9);
+            border-color: rgba($color: #085ca3, $alpha: 0.9);
+            border: none;
+            &.active {
+                background-color: #085ca3;
+                border-color: #085ca3;
+                color: white;
+            }
+            &:hover {
+                background-color: #085ca3;
+                border-color: #085ca3;
             }
         }
     }
@@ -73,6 +133,13 @@
     }
 }
 
+.page__title {
+    font: normal normal 600 22px/36px "Montserrat", sans-serif;
+    letter-spacing: 0.09px;
+    color: #171725;
+    margin-bottom: 0;
+}
+
 .section__title {
     text-align: center;
     font: normal normal bold 25px/30px "Montserrat";
@@ -92,6 +159,9 @@
     color: #085ca3;
     box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
     min-width: 180px;
+    &.fw-semibold {
+        font-weight: 600;
+    }
     &:focus {
         box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
     }
@@ -121,6 +191,17 @@
             color: white;
             background-color: darken($color: #00a87b, $amount: 5) !important;
         }
+        &--outline {
+            border: 2px solid #1ba87b;
+            color: #1e1e1e;
+            &:hover {
+                background-color: #1ba87b;
+                color: white;
+                & svg {
+                    fill: #fff;
+                }
+            }
+        }
     }
     &__primary {
         background-color: #085ca3;
@@ -138,6 +219,25 @@
         &:hover {
             color: white;
             background-color: darken($color: #9f9f9f, $amount: 5);
+        }
+    }
+    &__warning {
+        background-color: #eb9100;
+        color: white;
+        &:hover {
+            background-color: darken($color: #eb9100, $amount: 5);
+            color: white;
+        }
+        &--outline {
+            border: 2px solid #eb9102;
+            color: #1e1e1e;
+            &:hover {
+                background-color: #eb9102;
+                color: white;
+                & svg {
+                    fill: #fff;
+                }
+            }
         }
     }
 }

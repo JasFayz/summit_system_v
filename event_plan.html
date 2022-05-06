@@ -733,191 +733,195 @@
                                 </ul>
                             </div>
                             <div class="card__body">
-                                <div class="section__title">Форма мероприятия</div>
-                                <form action="">
-                                    <div class="row">
-                                        <div class="col-xl-6">
-                                            <div class="form-group">
-                                                <label for="" class="form__label">Дата мероприятия</label>
-                                                <div class="row g-0">
-                                                    <div class="col-md-6">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <div class="input-group-text">
-                                                                    с
-                                                                </div>
+                                <div class="section__title">Карточка плана мероприятия</div>
+                                <b-tabs content-class="mt-3" nav-class="plan__tab">
+                                    <b-tab title="31.03.22" active title-item-class="plan__tab_item" title-link-class="plan__tab_link">
+                                        <div class="card">
+                                            <div class="card__body pt-4 px-0">
+                                                <button class="btn button button__success--outline fw-semibold mb-3">
+                                                  Добавить тему 
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="#1ba87b">
+                                                    <path id="plus_1_" data-name="plus (1)" d="M21.083,10.083H11.917V.917A.917.917,0,0,0,11,0h0a.917.917,0,0,0-.917.917v9.167H.917A.917.917,0,0,0,0,11H0a.917.917,0,0,0,.917.917h9.167v9.167A.917.917,0,0,0,11,22h0a.917.917,0,0,0,.917-.917V11.917h9.167A.917.917,0,0,0,22,11h0A.917.917,0,0,0,21.083,10.083Z" />
+                                                  </svg>
+                                               </button>
+
+                                                <div class="theme__form">
+                                                    <div class="row mt-1">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="form__label">
+                                                            Тема мероприятия
+                                                          </label>
+                                                                <input type="text" class="form-control" placeholder="Проблемы безопасности в IT-секторе">
                                                             </div>
-                                                            <input type="date" class="form-control w-auto">
-
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="form__label">Место проведения</label>
+                                                                <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
+                                                                    <template #first>
+                                                         <b-form-select-option :value="null" disabled>Безопасность </b-form-select-option>
+                                                      </template>
+                                                                    <!-- These options will appear after the ones from 'options' prop -->
+                                                                    <b-form-select-option value="C">Option C</b-form-select-option>
+                                                                    <b-form-select-option value="D">Option D</b-form-select-option>
+                                                                </b-form-select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="form__label">Спикер</label>
+                                                                <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
+                                                                    <template #first>
+                                                         <b-form-select-option :value="null" disabled>Безопасность </b-form-select-option>
+                                                      </template>
+                                                                    <!-- These options will appear after the ones from 'options' prop -->
+                                                                    <b-form-select-option value="C">Option C</b-form-select-option>
+                                                                    <b-form-select-option value="D">Option D</b-form-select-option>
+                                                                </b-form-select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="form__label">Время на выступление</label>
+                                                                <div class="row g-0">
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-group">
+                                                                            <div class="input-group-prepend">
+                                                                                <div class="input-group-text">
+                                                                                    с
+                                                                                </div>
+                                                                            </div>
+                                                                            <input type="time" class="form-control w-auto">
 
-                                                            <div class="input-group">
-                                                                <div class="input-group-prepend">
-                                                                    <div class="input-group-text">
-                                                                        по
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text">
+                                                                                        по
+                                                                                    </div>
+                                                                                </div>
+                                                                                <input type="time" class="form-control w-auto">
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <input type="date" class="form-control w-auto">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <div class="form-group">
-                                                <label for="" class="form__label">Язык проведения мероприятия 
-                                                  <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                    <label class="custom-control-label" for="customCheck1">Синхронный перевод</label>
-                                            </div>
-                                            </label>
-                                            <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
-                                                <template #first>
-                                                  <b-form-select-option :value="null" disabled>Гендер </b-form-select-option>
-                                                </template>
-                                                <!-- These options will appear after the ones from 'options' prop -->
-                                                <b-form-select-option value="C">Option C</b-form-select-option>
-                                                <b-form-select-option value="D">Option D</b-form-select-option>
-                                            </b-form-select>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="form-group">
-                                            <label for="" class="form__label">
-                                              Наименование мероприятия
-                                            </label>
-                                            <input type="text" class="form-control" placeholder="Итоговая конференция стран ШОС">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <label for="" class="form__label">Организатор мероприятия (организация)</label>
-                                        <input type="text" class="form-control" placeholder="Мининфоком">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <label for="" class="form__label">Место проведения</label>
-                                        <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
-                                            <template #first>
-                                            <b-form-select-option :value="null" disabled>Отель «Hyatt Regency Ташкент» </b-form-select-option>
-                                          </template>
-                                            <!-- These options will appear after the ones from 'options' prop -->
-                                            <b-form-select-option value="C">Option C</b-form-select-option>
-                                            <b-form-select-option value="D">Option D</b-form-select-option>
-                                        </b-form-select>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="form-group">
-                                            <label for="" class="form__label">Направление проводимого мероприятия</label>
-                                            <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
-                                                <template #first>
-                                              <b-form-select-option :value="null" disabled>Безопасность </b-form-select-option>
-                                            </template>
-                                                <!-- These options will appear after the ones from 'options' prop -->
-                                                <b-form-select-option value="C">Option C</b-form-select-option>
-                                                <b-form-select-option value="D">Option D</b-form-select-option>
-                                            </b-form-select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="" class="form__label">Зал</label>
-                                            <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
-                                                <template #first>
-                                            <b-form-select-option :value="null" disabled>Безопасность </b-form-select-option>
-                                           </template>
-                                                <!-- These options will appear after the ones from 'options' prop -->
-                                                <b-form-select-option value="C">Option C</b-form-select-option>
-                                                <b-form-select-option value="D">Option D</b-form-select-option>
-                                            </b-form-select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <label for="" class="form__label">Время проведения (с-по)</label>
-                                                    <input type="time" class="form-control" placeholder="12:00">
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <label for="" class="form__label">Количество участников</label>
-                                                    <div class="position-relative">
-                                                        <b-form-input type="number" min="1" id="number_1" placeholder="72"></b-form-input>
-                                                        <button class="btn number_inc" type="button" @click="handleNumberInc" data-number-id="number_1">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.002" height="7.173" viewBox="0 0 14.002 7.173">
-                                                          <path id="free-icon-font-angle-small-down-3916864" d="M18.71,14.792a1,1,0,0,1-1.42,0l-4.58-4.58a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42-1.41l4.59-4.59a3,3,0,0,1,4.24,0l4.59,4.59A1,1,0,0,1,18.71,14.792Z" transform="translate(-4.999 -7.914)" fill="#1e1e1e"/>
-                                                        </svg>
-                                                      </button>
-                                                        <button class="btn number_dec" type="button" @click="handleNumberDec" data-number-id="number_1">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.002" height="7.173" viewBox="0 0 14.002 7.173">
-                                                          <path id="free-icon-font-angle-small-down-3916864" d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21A1,1,0,0,0,5.29,9.62l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z" transform="translate(-4.999 -7.914)" fill="#1e1e1e"/>
-                                                        </svg>
-                                                      </button>
+                                                    <div class="row justify-content-end">
+                                                        <button class="btn button button__success">Создать тему</button>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="" class="form__label">Наличие кейтеринга</label>
-                                                    <div class="custom-control ">
-                                                        <input type="radio" class="custom-control-input" id="customCheck111" name="ketering">
-                                                        <label class="custom-control-label" for="customCheck111">Да</label>
-                                                    </div>
-                                                    <div class="custom-control ">
-                                                        <input type="radio" class="custom-control-input" id="customCheck222" name="ketering">
-                                                        <label class="custom-control-label" for="customCheck222">Нет</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="" class="form__label">Наличие видео-съемки</label>
-                                                    <div class="custom-control ">
-                                                        <input type="radio" class="custom-control-input" id="checkboxVideo1" name="video">
-                                                        <label class="custom-control-label" for="checkboxVideo1">Да</label>
-                                                    </div>
-                                                    <div class="custom-control ">
-                                                        <input type="radio" class="custom-control-input" id="checkboxVideo2" name="video">
-                                                        <label class="custom-control-label" for="checkboxVideo2">Нет</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="" class="form__label">План проведения мероприятия</label>
-                                            <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
-                                                <template #first>
-                                            <b-form-select-option :value="null" disabled>Безопасность </b-form-select-option>
-                                          </template>
-                                                <!-- These options will appear after the ones from 'options' prop -->
-                                                <b-form-select-option value="C">Option C</b-form-select-option>
-                                                <b-form-select-option value="D">Option D</b-form-select-option>
-                                            </b-form-select>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="row justify-content-end">
-                                <button class="btn button button__success w-auto mt-3 mr-3">Создать</button>
-                                <button class="btn button button__primary w-auto mt-3 mr-3">Сохранить</button>
-                                <button class="btn button button__secondary w-auto mt-3 mr-3">Удалить</button>
-                            </div>
-                            </form>
 
+                                                <div class="row mt-3 no-gutters">
+                                                    <button class="btn button button__success--outline fw-semibold mb-3">
+                                                    Добавить следующую тему
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="#1ba87b">
+                                                      <path id="plus_1_" data-name="plus (1)" d="M21.083,10.083H11.917V.917A.917.917,0,0,0,11,0h0a.917.917,0,0,0-.917.917v9.167H.917A.917.917,0,0,0,0,11H0a.917.917,0,0,0,.917.917h9.167v9.167A.917.917,0,0,0,11,22h0a.917.917,0,0,0,.917-.917V11.917h9.167A.917.917,0,0,0,22,11h0A.917.917,0,0,0,21.083,10.083Z" />
+                                                    </svg>
+                                                </button>
+                                                </div>
+
+                                                <div class="row mt-3 no-gutters">
+                                                    <button class="btn button button__warning--outline fw-semibold mb-3">
+                                                      Добавить ивент 
+                                                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="#EB9102">
+                                                        <path id="plus_1_" data-name="plus (1)" d="M21.083,10.083H11.917V.917A.917.917,0,0,0,11,0h0a.917.917,0,0,0-.917.917v9.167H.917A.917.917,0,0,0,0,11H0a.917.917,0,0,0,.917.917h9.167v9.167A.917.917,0,0,0,11,22h0a.917.917,0,0,0,.917-.917V11.917h9.167A.917.917,0,0,0,22,11h0A.917.917,0,0,0,21.083,10.083Z" />
+                                                      </svg>
+                                                    </button>
+                                                </div>
+
+                                                <div class="small-event__form mb-5">
+                                                    <div class="row ">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="form__label">
+                                                              Наим-ние ивента
+                                                                </label>
+                                                                <input type="text" class="form-control" placeholder="Кофе-брейк">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="form__label">Место проведения</label>
+                                                                <b-form-select v-model="selected" :options="options" class="form-select " value-field="item" text-field="name" disabled-field="notEnabled">
+                                                                    <template #first>
+                                                                 <b-form-select-option :value="null" disabled>Безопасность </b-form-select-option>
+                                                                </template>
+                                                                    <!-- These options will appear after the ones from 'options' prop -->
+                                                                    <b-form-select-option value="C">Option C</b-form-select-option>
+                                                                    <b-form-select-option value="D">Option D</b-form-select-option>
+                                                                </b-form-select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="" class="form__label">Время на выступление</label>
+                                                                <div class="row g-0">
+                                                                    <div class="col-md-6">
+                                                                        <div class="input-group">
+                                                                            <div class="input-group-prepend">
+                                                                                <div class="input-group-text">
+                                                                                    с
+                                                                                </div>
+                                                                            </div>
+                                                                            <input type="time" class="form-control w-auto">
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+
+                                                                            <div class="input-group">
+                                                                                <div class="input-group-prepend">
+                                                                                    <div class="input-group-text">
+                                                                                        по
+                                                                                    </div>
+                                                                                </div>
+                                                                                <input type="time" class="form-control w-auto">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-end no-gutters">
+                                                        <button class="btn button button__warning">
+                                                          Создать ивент
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters justify-content-end">
+                                                    <button class="btn button button__success">
+                                                    Создать план мероприятия
+                                                  </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </b-tab>
+                                    <b-tab title="01.04.22" title-item-class="plan__tab_item" title-link-class="plan__tab_link">
+
+                                    </b-tab>
+                                    <b-tab title="02.04.22" title-item-class="plan__tab_item" title-link-class="plan__tab_link">
+
+                                    </b-tab>
+                                    <b-tab title="03.04.22" title-item-class="plan__tab_item" title-link-class="plan__tab_link">
+
+                                    </b-tab>
+                                </b-tabs>
+                            </div>
                         </div>
+                    </b-tab>
+                </b-tabs>
             </div>
-            </b-tab>
-            </b-tabs>
-    </div>
-    </main>
+        </main>
     </div>
 
 
