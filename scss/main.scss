@@ -54,9 +54,14 @@ body {
 }
 
 main {
-    flex: 0 1 100%;
+    width: calc(100% - 260px);
+    flex: 1 1 calc(100% - 260px);
     display: flex;
     flex-direction: column;
+    &.mini {
+        width: calc(100% - 70px);
+        flex: 1 1 calc(100% - 70px);
+    }
 }
 
 @import "./_fonts";
@@ -64,4 +69,4 @@ main {
 @import "./_header";
 @import "./_content";
 @import "./_forms";
-@import './_table';
+@import "./_table";

@@ -104,8 +104,18 @@
 
 .card {
     border: none;
-    border-bottom-right-radius: 14px;
-    border-bottom-left-radius: 14px;
+    &.tlc {
+        border-top-left-radius: 14px;
+    }
+    &.trc {
+        border-top-right-radius: 14px;
+    }
+    &.blc {
+        border-bottom-left-radius: 14px;
+    }
+    &.brc {
+        border-bottom-right-radius: 14px;
+    }
     &__header {
         padding: 28px 30px 17px;
         & .nav {
@@ -130,6 +140,16 @@
         padding: 0 34px 30px 30px;
         border-bottom-right-radius: 14px;
         border-bottom-left-radius: 14px;
+    }
+    &__title {
+        font: normal normal 500 24px/24px "Montserrat", sans-serif;
+        letter-spacing: 0px;
+        color: #0b1023;
+    }
+    &__subtitle {
+        font: normal normal 500 16px/16px "Montserrat", sans-serif;
+        letter-spacing: 0px;
+        color: rgba($color: #0b1023, $alpha: 0.5);
     }
 }
 
@@ -202,6 +222,14 @@
                 }
             }
         }
+        &__alt {
+            background-color: #71b3b1;
+            color: white;
+            &:hover {
+                background-color: darken($color: #71b3b1, $amount: 5);
+                color: white;
+            }
+        }
     }
     &__primary {
         background-color: #085ca3;
@@ -241,3 +269,31 @@
         }
     }
 }
+
+.nav {
+    &__tabs {
+        & .nav {
+            &__link {
+                font: normal normal 500 16px/16px "Montserrat", sans-serif;
+                text-decoration: none;
+                letter-spacing: 0px;
+                color: #0b1023;
+                padding: 25px 15px;
+                display: block;
+                border-bottom: 2px solid transparent;
+                transition: all 0.3s linear;
+                &.active {
+                    border-bottom: 2px solid #0b1023;
+                }
+                &:hover {
+                    border-bottom: 2px solid #0b1023;
+                }
+            }
+        }
+    }
+    &.hide__tabnav {
+        display: none
+    }
+}
+
+@import "./_smallbox";

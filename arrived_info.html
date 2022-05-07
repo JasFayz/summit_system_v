@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <meta name="description" content="Simple Starter Description" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image.jpg" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="sidebar" :class="{'mini': sidebarMinified}">
+            <button class="sidebar__mini-btn" :class="{'mini': sidebarMinified}" @click="sidebarMinified = !sidebarMinified">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="9.182"
+            height="14.122"
+            viewBox="0 0 9.182 14.122"
+          >
+            <path
+              id="Path_10101"
+              data-name="Path 10101"
+              d="M261.939,36.939,254.879,44l7.06,7.061,2.122-2.122L259.121,44l4.94-4.939Z"
+              transform="translate(-254.879 -36.939)"
+              fill="#085ca3"
+            />
+          </svg>
+        </button>
+            <div class="sidebar__main">
+                <ul class="nav">
+                    <li class="sidebar__nav-title">Асосий меню</li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 511.942 511.942" style="enable-background: new 0 0 511.942 511.942" xml:space="preserve" width="20" height="20" fill="#ccd2e3">
+                    <path
+                      d="M158.406,470.29h-32.53c-6.075,0-11-4.925-11-11s4.925-11,11-11h32.53C172.989,448.865,173.001,469.71,158.406,470.29z"
+                    />
+                    <path
+                      d="M386.124,470.29h-32.53c-6.075,0-11-4.925-11-11s4.925-11,11-11h32.53C400.707,448.865,400.719,469.71,386.124,470.29z"
+                    />
+                    <path
+                      d="M223.469,114.847h-81.328c-6.075,0-11,4.925-11,11v265.514h22V235.899h59.328v155.462h22V125.847  C234.469,119.772,229.544,114.847,223.469,114.847z M153.141,213.899v-77.052h59.328v77.052H153.141z"
+                    />
+                    <path
+                      d="M501,391.361h-38.813V52.652c0-6.075-4.925-11-11-11h-81.327c-6.075,0-11,4.925-11,11v338.709H71.813v-34.929h59.327v-22  H71.813v-51.195h59.327v-22H60.813c-6.075,0-11,4.925-11,11v119.124H11c-6.075,0-11,4.925-11,11s4.925,11,11,11h490  C515.399,412.865,515.778,392.028,501,391.361z M380.859,63.652h59.327v99.991h-59.327V63.652z M380.859,185.643h59.327v205.718  h-59.327V185.643z"
+                    />
+                    <path
+                      d="M299.531,318.166v-67.461h59.328v-22h-70.328c-6.075,0-11,4.925-11,11v151.655h22v-51.194h59.328v-22  H299.531z"
+                    />
+                  </svg>
+                            </div>
+                            <div class="text">Бош саҳифа</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav">
+                    <li class="sidebar__nav-title">Кабинет модератора</li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="id" width="20.907" height="20.907" viewBox="0 0 20.907 20.907" fill="#ccd2e3">
+                    <path
+                      id="Контур_10113"
+                      data-name="Контур 10113"
+                      d="M20.458,5.562H13.144V.449A.449.449,0,0,0,12.695,0H8.212a.449.449,0,0,0-.449.449V5.562H.449A.449.449,0,0,0,0,6.012V20.458a.449.449,0,0,0,.449.449H20.458a.449.449,0,0,0,.449-.449V6.012A.449.449,0,0,0,20.458,5.562ZM8.661.9h3.585V8.053H8.661Zm11.347,19.11H.9V6.461H7.763V8.053H5.887a.449.449,0,0,0,0,.9H15.02a.449.449,0,1,0,0-.9H13.144V6.461h6.864Z"
+                    />
+                    <path
+                      id="Контур_10114"
+                      data-name="Контур 10114"
+                      d="M276.637,289.162a.449.449,0,0,0,.449.449h6.263a.449.449,0,0,0,0-.9h-6.263A.449.449,0,0,0,276.637,289.162Z"
+                      transform="translate(-265.341 -276.924)"
+                    />
+                    <path
+                      id="Контур_10115"
+                      data-name="Контур 10115"
+                      d="M283.106,349.709h-6.274a.449.449,0,1,0,0,.9h6.274a.449.449,0,0,0,0-.9Z"
+                      transform="translate(-265.097 -335.429)"
+                    />
+                    <path
+                      id="Контур_10116"
+                      data-name="Контур 10116"
+                      d="M279.91,410.7h-2.947a.449.449,0,0,0,0,.9h2.947a.449.449,0,1,0,0-.9Z"
+                      transform="translate(-265.223 -393.934)"
+                    />
+                    <path
+                      id="Контур_10117"
+                      data-name="Контур 10117"
+                      d="M65.712,274.856a2.239,2.239,0,1,0-2.926,0,3.332,3.332,0,0,0-1.779,2.2.449.449,0,0,0,.872.215,2.441,2.441,0,0,1,4.74,0,.449.449,0,1,0,.872-.215A3.332,3.332,0,0,0,65.712,274.856Zm-1.463-3.035a1.341,1.341,0,1,1-1.341,1.341A1.343,1.343,0,0,1,64.249,271.821Z"
+                      transform="translate(-58.503 -259.86)"
+                    />
+                  </svg>
+                            </div>
+                            <div class="text">Зарегистрировать участника</div>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19.921" height="20" viewBox="0 0 19.921 20" fill="#ccd2e3">
+                    <g id="social-care" transform="translate(-1.016)">
+                      <g
+                        id="Group_2065"
+                        data-name="Group 2065"
+                        transform="translate(1.016 10.803)"
+                      >
+                        <g id="Group_2064" data-name="Group 2064">
+                          <g id="Group_2063" data-name="Group 2063">
+                            <path
+                              id="Path_10111"
+                              data-name="Path 10111"
+                              d="M5.758,285.745H1.446a.43.43,0,0,1-.43-.43v-3.574a.43.43,0,0,1,.166-.339l3.582-2.786a4.421,4.421,0,0,1,2.7-.927h5.851a1.621,1.621,0,0,1,1.51,2.212l.024-.02,3.294-2.914a1.728,1.728,0,0,1,2.335.071h0a1.563,1.563,0,0,1-.061,2.268l-4.32,3.879a3.6,3.6,0,0,1-2.41.923H8.224L6,285.667A.429.429,0,0,1,5.758,285.745Zm-3.883-.859H5.622l2.219-1.559a.43.43,0,0,1,.247-.078h5.6a2.744,2.744,0,0,0,1.835-.7l4.32-3.879a.7.7,0,0,0,.028-1.021h0a.868.868,0,0,0-1.158-.035l-3.294,2.914a1.62,1.62,0,0,1-1.074.407H9.217a.43.43,0,0,1,0-.859h4.1a.762.762,0,0,0,0-1.523H7.465a3.558,3.558,0,0,0-2.174.746l-3.416,2.657v2.934Z"
+                              transform="translate(-1.016 -276.548)"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                      <path
+                        id="Path_10112"
+                        data-name="Path 10112"
+                        d="M149.378,4.762a2.663,2.663,0,1,0-3.273,0A4.343,4.343,0,0,0,143.34,8.8v.561a.43.43,0,0,0,.43.43h7.942a.43.43,0,0,0,.43-.43V8.8A4.343,4.343,0,0,0,149.378,4.762Zm-1.637-3.9a1.8,1.8,0,1,1-1.8,1.8A1.806,1.806,0,0,1,147.741.859Zm3.541,8.076H144.2a3.542,3.542,0,1,1,7.083,0Z"
+                        transform="translate(-136.764)"
+                        fill="#51cbfc"
+                      />
+                    </g>
+                  </svg>
+                            </div>
+                            <div class="text">Карточки участников</div>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17.999" viewBox="0 0 18 17.999" fill="#ccd2e3">
+                    <g id="school" transform="translate(0 -0.018)">
+                      <g
+                        id="Group_2066"
+                        data-name="Group 2066"
+                        transform="translate(0 2.69)"
+                      >
+                        <path
+                          id="Path_10118"
+                          data-name="Path 10118"
+                          d="M213.885,212.351a1.535,1.535,0,1,0,1.535,1.535A1.537,1.537,0,0,0,213.885,212.351Zm0,2.3a.762.762,0,1,1,.762-.762A.763.763,0,0,1,213.885,214.648Z"
+                          transform="translate(-204.885 -207.558)"
+                        />
+                        <path
+                          id="Path_10119"
+                          data-name="Path 10119"
+                          d="M359.35,294.461v1.148a.387.387,0,0,0,.773,0v-1.148A.387.387,0,0,0,359.35,294.461Z"
+                          transform="translate(-346.717 -286.411)"
+                        />
+                        <path
+                          id="Path_10120"
+                          data-name="Path 10120"
+                          d="M65.737,392.018a.387.387,0,0,0-.387.387v1.148a.387.387,0,0,0,.773,0V392.4A.387.387,0,0,0,65.737,392.018Z"
+                          transform="translate(-63.053 -380.909)"
+                        />
+                        <path
+                          id="Path_10121"
+                          data-name="Path 10121"
+                          d="M17.613,79.076h-6.73l-1.5-1.5V76.4H9a.387.387,0,0,1-.387-.387V77.58l-1.5,1.5H.387A.387.387,0,0,0,0,79.463c0,1.465,0,9.843,0,11.5a.387.387,0,0,0,.387.387H17.613A.387.387,0,0,0,18,90.959c0-1.7,0-9.981,0-11.5A.387.387,0,0,0,17.613,79.076ZM.774,79.85H6.3L4.789,81.361H.774Zm9.562,10.722H7.664V86.178h2.672Zm6.89,0H11.109V85.791a.387.387,0,0,0-.387-.387H7.278a.387.387,0,0,0-.387.387v4.781H.774v-8.4H4.981a.387.387,0,0,0,.273-.113L9,78.316l3.746,3.741a.387.387,0,0,0,.273.113h4.207v8.4Zm0-9.175H13.211L11.7,79.885h5.527V81.4Z"
+                          transform="translate(0 -76.018)"
+                        />
+                      </g>
+                      <g
+                        id="Group_2067"
+                        data-name="Group 2067"
+                        transform="translate(2.297 0.018)"
+                      >
+                        <path
+                          id="Path_10122"
+                          data-name="Path 10122"
+                          d="M65.737,294.018a.387.387,0,0,0-.387.387v1.148a.387.387,0,0,0,.773,0V294.4A.387.387,0,0,0,65.737,294.018Z"
+                          transform="translate(-65.35 -283.683)"
+                          fill="#51cbfc"
+                        />
+                        <path
+                          id="Path_10123"
+                          data-name="Path 10123"
+                          d="M359.737,392.018a.387.387,0,0,0-.387.387v1.148a.387.387,0,1,0,.773,0V392.4A.387.387,0,0,0,359.737,392.018Z"
+                          transform="translate(-349.015 -378.238)"
+                          fill="#51cbfc"
+                        />
+                        <path
+                          id="Path_10124"
+                          data-name="Path 10124"
+                          d="M425.071,294.018a.387.387,0,0,0-.387.387v1.148a.387.387,0,0,0,.773,0V294.4A.387.387,0,0,0,425.071,294.018Z"
+                          transform="translate(-412.052 -283.683)"
+                          fill="#51cbfc"
+                        />
+                        <path
+                          id="Path_10125"
+                          data-name="Path 10125"
+                          d="M131.07,294.018a.387.387,0,0,0-.387.387v1.148a.387.387,0,1,0,.773,0V294.4A.387.387,0,0,0,131.07,294.018Z"
+                          transform="translate(-128.386 -283.683)"
+                          fill="#51cbfc"
+                        />
+                        <path
+                          id="Path_10126"
+                          data-name="Path 10126"
+                          d="M425.071,392.018a.387.387,0,0,0-.387.387v1.148a.387.387,0,0,0,.773,0V392.4A.387.387,0,0,0,425.071,392.018Z"
+                          transform="translate(-412.052 -378.238)"
+                          fill="#51cbfc"
+                        />
+                        <path
+                          id="Path_10127"
+                          data-name="Path 10127"
+                          d="M131.07,392.018a.387.387,0,0,0-.387.387v1.148a.387.387,0,0,0,.773,0V392.4A.387.387,0,0,0,131.07,392.018Z"
+                          transform="translate(-128.386 -378.238)"
+                          fill="#51cbfc"
+                        />
+                        <path
+                          id="Path_10128"
+                          data-name="Path 10128"
+                          d="M249.236,2.7V.4a.387.387,0,0,0-.387-.387H245.4a.387.387,0,0,0-.387.387V2.7a.387.387,0,0,0,.387.387h3.445A.387.387,0,0,0,249.236,2.7Zm-.773-.387H245.79V.791h2.672Z"
+                          transform="translate(-238.701 -0.018)"
+                          fill="#51cbfc"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                            </div>
+                            <div class="text">Создать мероприятие</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav">
+                    <li class="sidebar__nav-title">Созлаш</li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15.535" height="19.48" viewBox="0 0 15.535 19.48" fill="#ccd2e3">
+                    <g id="protection" transform="translate(-51.847)">
+                      <g
+                        id="Group_2087"
+                        data-name="Group 2087"
+                        transform="translate(51.847)"
+                      >
+                        <g id="Group_2086" data-name="Group 2086">
+                          <g id="Group_2085" data-name="Group 2085">
+                            <g id="Group_2084" data-name="Group 2084">
+                              <g id="Group_2083" data-name="Group 2083">
+                                <g id="Group_2082" data-name="Group 2082">
+                                  <g id="Group_2081" data-name="Group 2081">
+                                    <g id="Group_2080" data-name="Group 2080">
+                                      <g id="Group_2079" data-name="Group 2079">
+                                        <g
+                                          id="Group_2078"
+                                          data-name="Group 2078"
+                                        >
+                                          <path
+                                            id="Path_10146"
+                                            data-name="Path 10146"
+                                            d="M59.614,19.48a.418.418,0,0,1-.145-.026A11.65,11.65,0,0,1,51.847,8.522V1.966A.418.418,0,0,1,52.1,1.58a18.645,18.645,0,0,1,15.023,0,.418.418,0,0,1,.256.386V8.522a11.65,11.65,0,0,1-7.623,10.932A.419.419,0,0,1,59.614,19.48ZM52.684,2.246V8.522a10.854,10.854,0,0,0,6.93,10.092,10.854,10.854,0,0,0,6.93-10.092V2.246A17.852,17.852,0,0,0,52.684,2.246Z"
+                                            transform="translate(-51.847)"
+                                          />
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                      <g
+                        id="Group_2091"
+                        data-name="Group 2091"
+                        transform="translate(55.124 3.945)"
+                      >
+                        <g id="Group_2090" data-name="Group 2090">
+                          <g id="Group_2088" data-name="Group 2088">
+                            <path
+                              id="Path_10147"
+                              data-name="Path 10147"
+                              d="M143.253,113.04h-1.547a.419.419,0,0,1-.412-.344l-.12-.658a3.91,3.91,0,0,1-1.224-.706l-.628.225a.419.419,0,0,1-.5-.185l-.774-1.34a.418.418,0,0,1,.092-.528l.51-.432a3.73,3.73,0,0,1,0-1.411l-.51-.433a.418.418,0,0,1-.092-.528l.774-1.34a.418.418,0,0,1,.5-.185l.628.225a3.912,3.912,0,0,1,1.224-.706l.12-.657a.419.419,0,0,1,.412-.344h1.547a.418.418,0,0,1,.412.344l.12.657a3.91,3.91,0,0,1,1.224.706l.628-.225a.418.418,0,0,1,.5.185l.774,1.34a.418.418,0,0,1-.092.528l-.51.433a3.73,3.73,0,0,1,0,1.411l.51.432a.418.418,0,0,1,.092.528l-.774,1.34a.418.418,0,0,1-.5.185l-.628-.225a3.911,3.911,0,0,1-1.224.706l-.12.658A.418.418,0,0,1,143.253,113.04Zm-1.2-.837h.849l.1-.562a.419.419,0,0,1,.3-.328,3.064,3.064,0,0,0,1.315-.758.418.418,0,0,1,.434-.095l.536.192.424-.735-.436-.37a.418.418,0,0,1-.135-.423,2.955,2.955,0,0,0,0-1.517.418.418,0,0,1,.135-.423l.436-.37-.424-.735-.536.192a.418.418,0,0,1-.434-.095,3.066,3.066,0,0,0-1.315-.758.418.418,0,0,1-.3-.328l-.1-.561h-.849l-.1.561a.419.419,0,0,1-.3.328,3.066,3.066,0,0,0-1.315.758.418.418,0,0,1-.434.095l-.536-.192-.424.735.436.37a.419.419,0,0,1,.135.423,2.955,2.955,0,0,0,0,1.517.419.419,0,0,1-.135.423l-.436.37.424.735.536-.192a.419.419,0,0,1,.434.095,3.065,3.065,0,0,0,1.315.758.419.419,0,0,1,.3.328Z"
+                              transform="translate(-137.99 -103.694)"
+                              fill="#51cbfc"
+                            />
+                          </g>
+                          <g
+                            id="Group_2089"
+                            data-name="Group 2089"
+                            transform="translate(2.911 3.094)"
+                          >
+                            <path
+                              id="Path_10148"
+                              data-name="Path 10148"
+                              d="M216.081,188.179a1.579,1.579,0,1,1,1.579-1.579A1.581,1.581,0,0,1,216.081,188.179Zm0-2.321a.742.742,0,1,0,.742.742A.743.743,0,0,0,216.081,185.858Z"
+                              transform="translate(-214.502 -185.021)"
+                              fill="#51cbfc"
+                            />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                            </div>
+                            <div class="text">Созлаш</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar__footer">
+                <ul class="nav reverse">
+                    <li class="nav__item">
+                        <a href="" class="nav__link">
+                            <div class="text">Тизимдан чиқиш</div>
+                            <div class="icon">
+                                <svg id="Icons_chevron-down" data-name="Icons / chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                      id="Path_399"
+                      data-name="Path 399"
+                      d="M0,0H24V24H0Z"
+                      fill="none"
+                    />
+                    <g
+                      id="_992680"
+                      data-name="992680"
+                      transform="translate(4.827 4.001)"
+                    >
+                      <g
+                        id="Group_1790"
+                        data-name="Group 1790"
+                        transform="translate(0 0.85)"
+                      >
+                        <g
+                          id="Group_1789"
+                          data-name="Group 1789"
+                          transform="translate(0 0)"
+                        >
+                          <path
+                            id="Path_1155"
+                            data-name="Path 1155"
+                            d="M7.149,13.957H1.787a.6.6,0,0,1-.6-.6V2.637a.6.6,0,0,1,.6-.6H7.149a.6.6,0,0,0,0-1.192H1.787A1.79,1.79,0,0,0,0,2.637V13.361a1.79,1.79,0,0,0,1.787,1.787H7.149a.6.6,0,1,0,0-1.192Z"
+                            transform="translate(0 -0.85)"
+                            fill="#7e84a3"
+                          />
+                        </g>
+                      </g>
+                      <g
+                        id="Group_1792"
+                        data-name="Group 1792"
+                        transform="translate(4.766 3.829)"
+                      >
+                        <g id="Group_1791" data-name="Group 1791">
+                          <path
+                            id="Path_1156"
+                            data-name="Path 1156"
+                            d="M179.5,110.911l-3.622-3.575a.6.6,0,1,0-.836.848l2.589,2.555H170.7a.6.6,0,0,0,0,1.192h6.937l-2.589,2.555a.6.6,0,1,0,.836.848l3.622-3.575a.6.6,0,0,0,0-.848Z"
+                            transform="translate(-170.1 -107.165)"
+                            fill="#7e84a3"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main :class="{'mini': sidebarMinified}">
+            <header class="header">
+                <a href="" class="header__logo">
+                    <span class="icon">
+              <img src="/images/header__logo.svg" alt="" />
+            </span>
+                    <span class="title"> Единая платформа форумов и мероприятий </span>
+                </a>
+                <div class="header__search" :class="{'show': headerSearch}">
+                    <input type="text" class="search__field" placeholder="Поиск" />
+                </div>
+                <div class="header__nav">
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <button class="nav__link search__button" @click="headerSearch = !headerSearch">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18.707"
+                    height="18.708"
+                    viewBox="0 0 18.707 18.708"
+                  >
+                    <path
+                      id="Path_10104"
+                      data-name="Path 10104"
+                      d="M1387,36a6,6,0,1,1-6,6A6.006,6.006,0,0,1,1387,36Zm0,14a7.952,7.952,0,0,0,4.9-1.688l4.4,4.4,1.414-1.414-4.4-4.4A7.99,7.99,0,1,0,1387,50Z"
+                      transform="translate(-1379 -34)"
+                      fill="#7e84a3"
+                    />
+                  </svg>
+                </button>
+                        </li>
+                        <li class="nav__item dropdown">
+                            <a href="" class="nav__link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20">
+                    <path
+                      id="Path_10105"
+                      data-name="Path 10105"
+                      d="M1445,54a2.982,2.982,0,0,0,2.818-2h-5.636A2.979,2.979,0,0,0,1445,54Zm7-5h-14v-.586l1.707-1.707a1,1,0,0,0,.217-.324A1.009,1.009,0,0,0,1440,46V42a5,5,0,0,1,10,0v4a1,1,0,0,0,.293.707L1452,48.414Zm0-3.414V42a7.006,7.006,0,0,0-5.145-6.742,2,2,0,0,0-3.71,0A7.007,7.007,0,0,0,1438,42v3.586l-1.707,1.707a1,1,0,0,0-.217.324A1.009,1.009,0,0,0,1436,48v2a1,1,0,0,0,1,1h16a1,1,0,0,0,1-1V48a1.009,1.009,0,0,0-.076-.383,1,1,0,0,0-.217-.324Z"
+                      transform="translate(-1436 -34)"
+                      fill="#7e84a3"
+                    />
+                  </svg>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">Link</a>
+                            </div>
+                        </li>
+                        <li class="nav__item dropdown">
+                            <a href="" class="nav__link dropdown__link">
+                                <span class="name"> М. Дилноза </span>
+                                <span class="avatar">
+                    <img
+                      src="/images/avatar.jpg"
+                      alt=""
+                      width="40"
+                      height="40"
+                      class="border-rounded"
+                    />
+                  </span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">Link</a>
+                                <a href="" class="dropdown-item">Link</a>
+                                <a href="" class="dropdown-item">Link</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div class="content">
+                <div class="row no-gutters justify-content-between align-items-center mb-4">
+                    <h2 class="page__title">
+                        ИТОГОВАЯ КОНФЕРЕНЦИЯ СТРАН ШОС, 12-15 АПРЕЛЯ 2022 Г.
+                    </h2>
+                    <button class="btn button button__primary">
+                      Скачать программу
+                      <svg id="free-icon-font-download-3917330" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path id="Path_10174" data-name="Path 10174" d="M9.878,18.122a3,3,0,0,0,4.244,0l3.211-3.211A1,1,0,0,0,15.919,13.5l-2.926,2.927L13,1a1,1,0,0,0-1-1h0a1,1,0,0,0-1,1l-.009,15.408L8.081,13.5a1,1,0,1,0-1.414,1.415Z" fill="#fff"/>
+                        <path id="Path_10175" data-name="Path 10175" d="M23,16h0a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V17a1,1,0,0,0-1-1H1a1,1,0,0,0-1,1v4a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V17A1,1,0,0,0,23,16Z" fill="#fff"/>
+                      </svg>
+                    </button>
+                </div>
+                <div class="card blc brc mb-1">
+                    <div class="card__header">
+                        <h3 class="card__title">Информация по прилету гостей мероприятия «Итоговый саммит стран ШОС»</h3>
+                        <div class="card__subtitle mb-2">12-15 апреля 2022 г.</div>
+                    </div>
+                    <div class="card__body">
+                        <table class="table table__info">
+                            <thead>
+                                <tr>
+                                    <th rowspan="3">Дата</th>
+                                    <th rowspan="3">Всего</th>
+                                    <th colspan="7">Прилет гостей (План)</th>
+                                    <th colspan="2">Прилет гостей (факт)</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4">Категории гостей</th>
+                                    <th colspan="3">Из них:</th>
+                                    <th rowspan="2">Прибыло</th>
+                                    <th rowspan="2">Не прибыло</th>
+                                </tr>
+                                <tr>
+                                    <th>Нез. наблюдатель</th>
+                                    <th>VIP</th>
+                                    <th>Обычный гость</th>
+                                    <th>Уточняется</th>
+                                    <th>Мужчины</th>
+                                    <th>Женщины</th>
+                                    <th>Уточняется</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>10.04.2022</td>
+                                <td>15</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>11</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>15</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>10.04.2022</td>
+                                <td>15</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>11</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>15</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>10.04.2022</td>
+                                <td>15</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>11</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>15</td>
+                                <td>0</td>
+                            </tr>
+                            <tfoot>
+                                <td>Итого:</td>
+                                <td>109</td>
+                                <td>40</td>
+                                <td>29</td>
+                                <td>35</td>
+                                <td>1</td>
+                                <td>72</td>
+                                <td>37</td>
+                                <td>0</td>
+                                <td>108</td>
+                                <td>1</td>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row align-items-center justify-content-end no-gutters  mt-4">
+                    <label for="" class="form__label mb-0 mr-3">Дата последнего редактирования данных модератором</label>
+                    <input type="text" class="form-control w-auto bg-white icon_calendar" disabled placeholder="30 / 03 / 2022">
+                </div>
+                <div class="row no-gutters justify-content-end mt-4">
+                    <button class="btn button button__success__alt">
+                      Отправить фидбек модератору
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script>
+        Vue.use(BootstrapVue);
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "Hello Vue!",
+                sidebarMinified: false,
+                headerSearch: false,
+                selected: null,
+                options: [{
+                    item: 'A',
+                    name: 'Option A'
+                }, {
+                    item: 'B',
+                    name: 'Option B'
+                }, {
+                    item: 'D',
+                    name: 'Option C',
+
+                }, {
+                    item: {
+                        d: 1
+                    },
+                    name: 'Option D'
+                }]
+            },
+            methods: {
+                handleFileInput() {
+                    this.$refs.fileInput.$el.querySelector('input').click()
+                },
+                handleNumberInc(e) {
+                    let field_id = e.target.getAttribute('data-number-id');
+                    let input = document.querySelector('#' + field_id);
+
+                    if (input.value == '') {
+                        input.value = 1
+                    } else {
+                        input.value = ++input.value;
+                    }
+                },
+                handleNumberDec(e) {
+                    let field_id = e.target.getAttribute('data-number-id');
+                    let input = document.querySelector('#' + field_id);
+
+                    if (input.value == '' || parseInt(input.value) <= 0) {
+                        input.value = 1
+                    } else {
+                        input.value = --input.value;
+                    }
+                },
+            }
+        });
+    </script>
+</body>
+
+</html>
