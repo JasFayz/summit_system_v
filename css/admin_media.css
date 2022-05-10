@@ -1,0 +1,42 @@
+/* === DESKTOP FIRST === */
+/* xl <= Extra extra large (xxl) */
+/* lg <= Extra large (xl) */
+/* md <= Large (lg) */
+@media (max-width: 992px) {
+  .header__nav .dropdown > .nav__link .name {
+    display: none;
+  }
+  .header__nav .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+/* sm <= Medium (md) */
+@media (max-width: 768px) {
+  .header__logo {
+    width: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  .header__logo .title {
+    display: none;
+  }
+}
+
+/* xs <= Small (sm) */
+/* === MOBILE FIRST === */
+/* Custom (xs) */
+/* Small (sm) */
+/* Medium (md) */
+/* Large (lg) */
+/* Extra large (xl) */
+/* Extra extra large (xxl) */
+@media (min-width: 1400px) {
+  .registration__form {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+/*# sourceMappingURL=admin_media.css.map */

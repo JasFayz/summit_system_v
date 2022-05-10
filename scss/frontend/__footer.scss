@@ -1,0 +1,91 @@
+.footer {
+    background-color: #015ca3;
+    &__container {
+        display: flex;
+        padding-top: 103px;
+        padding-bottom: 54px;
+        justify-content: space-between;
+    }
+    &__nav {
+        flex: 0 0 25%;
+        max-width: 25%;
+        & .nav {
+            display: flex;
+            flex-direction: column;
+            &__link {
+                font: normal normal 700 14px/44px "Montserrat", sans-serif;
+                letter-spacing: 0px;
+                color: #ffffff;
+                display: block;
+            }
+        }
+    }
+    &__copyright {
+        font: normal normal normal 12px/15px "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0px;
+        color: #ffffff;
+        flex: 0 0 calc(100% / 12 * 5);
+        max-width: calc(100% / 12 * 5);
+        padding-right: 40px;
+        padding-left: 40px;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        text-align: center;
+        & p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &_title {
+            font: normal normal 700 12px/15px "Montserrat", sans-serif;
+            letter-spacing: 0px;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        &_list {
+            list-style: none;
+            display: flex;
+            padding-left: 0;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        &_link {
+            padding: 0px 18px;
+            display: block;
+            border-right: 1px dashed #fff;
+            & svg {
+                transform: scale(1);
+                transition: all 0.3s linear;
+            }
+            &:hover {
+                & svg {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &_item {
+            &:last-child {
+                & .footer__social_link {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+    &__developer {
+        border-left: 1px solid #fff;
+        padding-left: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

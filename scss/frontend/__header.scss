@@ -1,0 +1,123 @@
+.header {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 26px;
+        padding-bottom: 20px;
+    }
+    &__logo {
+        flex: 0 0 560px;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+        & .icon {
+            margin-right: 44px;
+        }
+        & .text {
+            font: normal normal 500 28px/36px "Montserrat", sans-serif;
+            letter-spacing: 0px;
+            color: #1e1e1e;
+            text-decoration: none;
+        }
+    }
+    &__nav {
+        width: 100%;
+        background-color: rgba($color: #3a91f4, $alpha: 0.15);
+        display: flex;
+        justify-content: center;
+        border-radius: 13px;
+        & .nav {
+            justify-content: center;
+            &__link {
+                display: block;
+                font: normal normal bold 16px/19px "Montserrat", sans-serif;
+                letter-spacing: 0px;
+                color: #1c1c1c;
+                text-decoration: none;
+                padding: 22px;
+                transition: all 0.3s linear;
+                &:hover {
+                    background-color: rgba($color: #3a91f4, $alpha: 0.15);
+                }
+            }
+        }
+    }
+    & .nav {
+        &__lang {
+            & .nav__link {
+                font: normal normal 400 20px/24px "Montserrat", sans-serif;
+                text-decoration: none;
+                letter-spacing: 0px;
+                color: #015ca3;
+                padding: 16px 14px;
+                border: 1px solid transparent;
+                transition: all 0.3s linear;
+                display: block;
+                &:hover {
+                    border: 1px solid #13389b;
+                }
+                &.active {
+                    border: 1px solid #13389b;
+                }
+            }
+        }
+    }
+    &__mobile_btn {
+        transition: all 0.3s linear;
+        display: none;
+        padding: 22px;
+        z-index: 11;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.sandwich {
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    width: 32px;
+    &.is {
+        &-active {
+            .sandwich__line {
+                &--top {
+                    top: 10px;
+                    transform: rotate(45deg);
+                }
+                &--middle {
+                    opacity: 0;
+                }
+                &--bottom {
+                    top: 10px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    &__line {
+        background-color: #000000;
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        transition: all linear 0.4s;
+        width: 100%;
+        &--top {
+            top: 0;
+        }
+        &--middle {
+            top: 9px;
+        }
+        &--bottom {
+            top: 18px;
+        }
+    }
+}

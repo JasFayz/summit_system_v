@@ -1,0 +1,137 @@
+.streaming {
+    padding-top: 56px;
+    padding-bottom: 50px;
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: 87px;
+        padding-bottom: 66px;
+        padding-left: 225px;
+        padding-right: 225px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        position: relative;
+        border-radius: 24px;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($color: #015ca3, $alpha: 0.4);
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+        }
+    }
+    &__title {
+        font: normal normal bold 24px/30px "Montserrat", sans-serif;
+        letter-spacing: 0px;
+        color: #1e1e1e;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+    &__play_btn {
+        background-color: transparent;
+        border: none;
+        font: normal normal normal 21px/28px "Roboto", sans-serif;
+        letter-spacing: 0px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover {
+            & svg {
+                transform: scale(1.1);
+            }
+        }
+        & svg {
+            margin-right: 32px;
+            transform: scale(1);
+            transition: all 0.3s linear;
+        }
+    }
+    &__left {
+        flex: 0 0 32%;
+        position: relative;
+    }
+    &__right {
+        flex: 0 0 68%;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 70px;
+        padding-bottom: 114px;
+        position: relative;
+        border-left: 1px solid #fff;
+    }
+    &__timer {
+        &_title {
+            font: normal normal bold 20px/24px "Montserrat", sans-serif;
+            letter-spacing: 0px;
+            color: #ffffff;
+            text-transform: uppercase;
+            & svg {
+                margin-right: 15px;
+            }
+        }
+        &_container {
+            max-width: 510px;
+            display: inline-flex;
+            justify-content: space-between;
+            font: normal normal 400 45px/43px "Montserrat", sans-serif;
+            letter-spacing: 7.74px;
+            color: #dad3a7;
+            padding: 10px 48px;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M20.683,18,11.746,9.07a1.688,1.688,0,1,1,2.391-2.384L24.262,16.8a1.685,1.685,0,0,1,.049,2.327L14.144,29.32a1.688,1.688,0,0,1-2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23fff'/%3E%3C/svg%3E%0A"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.503' height='23.619' viewBox='0 0 13.503 23.619'%3E%3Cpath id='Icon_ionic-ios-arrow-back' data-name='Icon ionic-ios-arrow-back' d='M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z' transform='translate(-11.251 -6.194)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat, no-repeat;
+            background-position: 0 50%, 100% 50%;
+        }
+        &_cell {
+            display: flex;
+            flex-direction: column;
+            font: normal normal 400 45px/43px "Montserrat", sans-serif;
+            letter-spacing: 7.74px;
+            color: #dad3a7;
+            margin: 0 15px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            & .value {
+                margin-bottom: 5px;
+                text-align: center;
+                padding: 5px;
+            }
+            & .name {
+                font: normal normal bold 9px/8px "Montserrat", sans-serif;
+                letter-spacing: 0px;
+                color: #ffffff;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+    &__social {
+        list-style: none;
+        position: relative;
+        padding-left: 0;
+        display: flex;
+        margin-top: 14px;
+        &_item {
+            margin-right: 47px;
+        }
+        &_link {
+            & svg {
+                transform: scale(1);
+                transition: all 0.3s linear;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
