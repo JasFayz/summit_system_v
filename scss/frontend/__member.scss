@@ -1,0 +1,32 @@
+.member {
+    &__container {
+        padding-top: 62px;
+        padding-bottom: 96px;
+    }
+    &__card {
+        display: flex;
+        margin-bottom: 55px;
+        &_body {
+            padding: 0 37px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &_title {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 700;
+        }
+        &_desc {
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    &__avatar {
+        & img {
+            border-radius: 50%;
+        }
+    }
+}

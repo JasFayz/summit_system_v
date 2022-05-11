@@ -45,6 +45,18 @@ body {
     background-color: #fff;
 }
 
+.section__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 33px;
+    line-height: 41px;
+    font-weight: 700;
+    &_small {
+        font-size: 22px;
+        line-height: 36px;
+        font-weight: 600;
+    }
+}
+
 .button {
     font: normal normal bold 18px/22px "Montserrat";
     letter-spacing: 0px;
@@ -146,8 +158,11 @@ body {
     }
 }
 
+@import "./frontend/_forms";
 @import "./frontend/_header";
 @import "./frontend/_banner";
 @import "./frontend/_streaming";
 @import "./frontend/_news";
 @import "./frontend/_footer";
+@import "./frontend/_program";
+@import "./frontend/_member";

@@ -1,8 +1,24 @@
 .news {
     padding-bottom: 114px;
+    padding-top: 50px;
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -55px;
+        left: -100px;
+        width: 648px;
+        height: 648px;
+        background-image: url("../images/news_el.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+    }
     &__container {
         max-width: 1200px;
         margin: 0 auto;
+        position: relative;
     }
     &__card {
         display: flex;

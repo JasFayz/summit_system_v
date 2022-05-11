@@ -1,0 +1,322 @@
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form__label {
+    font: normal normal normal 16px/19px "Montserrat";
+    letter-spacing: 0px;
+    color: #010101;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-select {
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #c5c5c5;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    height: 54px;
+    padding: 16px 20px;
+    padding-right: 40px;
+    color: #767676;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14.002' height='7.173' viewBox='0 0 14.002 7.173'%3E%3Cpath id='free-icon-font-angle-small-down-3916864' d='M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21A1,1,0,0,0,5.29,9.62l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z' transform='translate(-4.999 -7.914)' fill='%231e1e1e'/%3E%3C/svg%3E%0A") no-repeat calc(100% - 20px) 50%;
+    &:focus {
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        border: 1px solid #c5c5c5;
+    }
+}
+
+.form-control {
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #c5c5c5;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    height: 54px;
+    &:focus {
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        border: 1px solid #c5c5c5;
+    }
+    &.icon_search {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.166' height='17.165' viewBox='0 0 17.166 17.165'%3E%3Cpath id='search' d='M16.924,15.914l-4.264-4.264a7.154,7.154,0,1,0-1.01,1.01l4.264,4.264a.714.714,0,1,0,1.01-1.01ZM7.134,12.848a5.714,5.714,0,1,1,5.714-5.714,5.714,5.714,0,0,1-5.714,5.714Z' transform='translate(0.032 0.032)' fill='%23085ca3'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) 50%;
+        padding-right: 40px !important;
+    }
+    &.icon_plus {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.227' height='20.227' viewBox='0 0 20.227 20.227'%3E%3Cpath id='plus_2_' data-name='plus (2)' d='M19.384,9.271H10.956V.843A.843.843,0,0,0,10.114,0h0a.843.843,0,0,0-.843.843V9.271H.843A.843.843,0,0,0,0,10.114H0a.843.843,0,0,0,.843.843H9.271v8.428a.843.843,0,0,0,.843.843h0a.843.843,0,0,0,.843-.843V10.956h8.428a.843.843,0,0,0,.843-.843h0A.843.843,0,0,0,19.384,9.271Z' fill='%231e1e1e'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) 50%;
+        padding-right: 40px !important;
+    }
+    &.icon_marker {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.11' height='24.002' viewBox='0 0 20.11 24.002'%3E%3Cg id='marker' transform='translate(-1.945 0.002)'%3E%3Cpath id='Path_10172' data-name='Path 10172' d='M12,6a4,4,0,1,0,4,4A4,4,0,0,0,12,6Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,12Z' fill='%231e1e1e'/%3E%3Cpath id='Path_10173' data-name='Path 10173' d='M12,24a5.271,5.271,0,0,1-4.311-2.2c-3.811-5.257-5.744-9.209-5.744-11.747a10.055,10.055,0,1,1,20.11,0c0,2.538-1.933,6.49-5.744,11.747A5.271,5.271,0,0,1,12,24ZM12,2.181a7.883,7.883,0,0,0-7.874,7.874c0,2.01,1.893,5.727,5.329,10.466a3.145,3.145,0,0,0,5.09,0c3.436-4.739,5.329-8.456,5.329-10.466A7.883,7.883,0,0,0,12,2.181Z' fill='%231e1e1e'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) 50%;
+        padding-right: 40px !important;
+    }
+    &.icon_calendar {
+        background-image: url("data:image/svg+xml,%3Csvg id='calendar' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath id='Path_8859' data-name='Path 8859' d='M15.833,1.667H15V.833a.833.833,0,0,0-1.667,0v.833H6.667V.833A.833.833,0,0,0,5,.833v.833H4.167A4.172,4.172,0,0,0,0,5.833v10A4.172,4.172,0,0,0,4.167,20H15.833A4.172,4.172,0,0,0,20,15.833v-10A4.172,4.172,0,0,0,15.833,1.667ZM1.667,5.833a2.5,2.5,0,0,1,2.5-2.5H15.833a2.5,2.5,0,0,1,2.5,2.5v.833H1.667Zm14.167,12.5H4.167a2.5,2.5,0,0,1-2.5-2.5v-7.5H18.333v7.5A2.5,2.5,0,0,1,15.833,18.333Z' fill='%231e1e1e'/%3E%3Ccircle id='Ellipse_18' data-name='Ellipse 18' cx='1.188' cy='1.188' r='1.188' transform='translate(8.813 11.33)' fill='%231e1e1e'/%3E%3Ccircle id='Ellipse_19' data-name='Ellipse 19' cx='1.188' cy='1.188' r='1.188' transform='translate(4.616 11.33)' fill='%231e1e1e'/%3E%3Ccircle id='Ellipse_20' data-name='Ellipse 20' cx='1.188' cy='1.188' r='1.188' transform='translate(13.009 11.33)' fill='%231e1e1e'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) 50%;
+        padding-right: 40px !important;
+    }
+}
+
+textarea.form-control {
+    min-height: 218px;
+}
+
+.custom-file {
+    height: 54px;
+    &-input {
+        &:focus {
+            &~.custom-file-label {
+                border: 1px solid #c5c5c5;
+                box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+            }
+        }
+    }
+    &-label {
+        height: 54px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        border: 1px solid #c5c5c5;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        &::after {
+            content: "" !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20.752' viewBox='0 0 20 20.752'%3E%3Cpath id='free-icon-font-clip-3917548' d='M19.853,8.3a.864.864,0,0,0-1.222,0L9.215,17.754A4.322,4.322,0,1,1,3.1,11.641l9.119-9.156a2.593,2.593,0,1,1,3.668,3.667L6.77,15.308a.883.883,0,0,1-1.222,0,.864.864,0,0,1,0-1.222L13.666,5.93a.864.864,0,1,0-1.222-1.222L4.325,12.864a2.593,2.593,0,0,0,0,3.668,2.656,2.656,0,0,0,3.668,0l9.118-9.157A4.322,4.322,0,1,0,11,1.263L1.88,10.419a6.051,6.051,0,0,0,8.558,8.558l9.415-9.453a.864.864,0,0,0,0-1.226Z' transform='translate(-0.108 0.003)' fill='%231e1e1e'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            border: none;
+            background-color: transparent;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.custom-control {
+    display: inline-block;
+    min-height: 1rem;
+    padding: 0;
+    margin-right: 30px;
+    &-input {
+        display: none;
+        position: absolute;
+        &:checked~.custom-control-label {
+            color: #085ca3;
+            &::before {
+                border-color: #085ca3;
+                background-color: #085ca3;
+            }
+            &::after {
+                content: "";
+            }
+        }
+    }
+    &-label {
+        padding-left: 30px;
+        color: #272727;
+        cursor: pointer;
+        min-height: 22px;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 2px;
+            width: 22px;
+            height: 22px;
+            border-radius: 2px;
+            border: none;
+            background-color: white;
+            box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        }
+        &::after {
+            content: none;
+            position: absolute;
+            top: 7px;
+            left: 3px;
+            width: 15px;
+            height: 7px;
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+            background-image: none;
+            transform: rotate(-45deg);
+            background-image: none !important;
+        }
+    }
+}
+
+.registration {
+    &__form {}
+    &__button {
+        font: normal normal normal 18px/22px "Montserrat";
+        letter-spacing: 0px;
+        font-weight: 500;
+        color: #ffffff;
+        padding: 15px 22px;
+        background-color: #085ca3;
+        min-width: 220px;
+        border-radius: 0;
+        &:hover {
+            background-color: darken($color: #085ca3, $amount: 10);
+            color: #fff;
+        }
+    }
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number_inc {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0.2em;
+    border: none;
+    &:focus {
+        box-shadow: none;
+        border: none;
+    }
+    &:active {
+        box-shadow: inset 0 2px 5px rgba($color: #000000, $alpha: 0.2);
+    }
+    & svg {
+        pointer-events: none;
+    }
+}
+
+.number_dec {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 0.2em;
+    border: none;
+    &:focus {
+        box-shadow: none;
+        border: none;
+    }
+    &:active {
+        box-shadow: inset 0 2px 5px rgba($color: #000000, $alpha: 0.2);
+    }
+    & svg {
+        pointer-events: none;
+    }
+}
+
+.input-group {
+    &-prepend {
+        flex: 0 1 60px;
+    }
+    &-text {
+        background: transparent;
+        border: none;
+    }
+    & .form-control:not(:first-child) {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    &.search__input {
+        width: 400px;
+        & .form-control {
+            height: 40px;
+            border: 1px solid #b2d6f2;
+        }
+        & .btn {
+            border-radius: 4px;
+            height: 40px;
+            &-primary {
+                background-color: #085ca3;
+                border-color: #085ca3;
+                &:focus {
+                    box-shadow: none !important;
+                }
+                &:active {
+                    box-shadow: none;
+                    background-color: #085ca3;
+                    border-color: #085ca3;
+                }
+                &:hover {
+                    background-color: darken($color: #085ca3, $amount: 5);
+                }
+            }
+        }
+    }
+}
+
+.login__form {
+    position: relative;
+    max-width: 470px;
+    margin: 0 auto;
+    margin-top: 73px;
+    padding-bottom: 70px;
+    z-index: 6;
+    & .form-control {
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        border: none;
+    }
+    & .forget__link {
+        font-family: "Montserrat";
+        font-size: 14px;
+        line-height: 18px;
+        color: #085ca3;
+        display: block;
+        text-align: right;
+        margin-top: 12px;
+    }
+    & .form__label {
+        font-family: "Montserrat";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+    & .js_password_btn {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 54px;
+        width: 54px;
+        z-index: 11;
+        &:focus {
+            border: none;
+        }
+        & svg,
+        & path {
+            transition: all 0.3s linear;
+        }
+        &:hover {
+            svg {
+                fill: #015ca3;
+            }
+            & path {
+                opacity: 1;
+            }
+        }
+    }
+    &_submit {
+        font-size: 21px;
+        line-height: 35px;
+        font-weight: 700;
+        padding: 20px;
+        min-width: 260px;
+    }
+}
