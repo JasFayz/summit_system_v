@@ -1,0 +1,130 @@
+.program__info {
+  &_tab {
+    & .info {
+      &__tab {
+        &_nav {
+          margin-top: 28px;
+          margin-bottom: 40px;
+          border-bottom: 0;
+          justify-content: center;
+          &__item {
+            display: flex;
+            & + .info__tab_nav__item {
+              margin-left: 112px;
+            }
+          }
+          &__link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 11px 20px 17px 20px;
+            border-radius: 13px;
+            -webkit-border-radius: 13px;
+            -moz-border-radius: 13px;
+            -ms-border-radius: 13px;
+            -o-border-radius: 13px;
+            background-color: transparent;
+            border: 2px solid transparent;
+            border-color: transparent;
+            &:hover {
+              border-color: #085ca3;
+            }
+
+            &.active {
+              border-color: #085ca3;
+              box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+
+              & .text {
+                color: #085ca3;
+              }
+              & path[fill="#000000"] {
+                fill: #085ca3;
+              }
+            }
+            & .text {
+              font-family: "Montserrat", sans-serif;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 1;
+              text-align: left;
+              color: #000000;
+            }
+            & .icon {
+              height: 38px;
+              width: 38px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+      &__container {
+      }
+      &__panel {
+        padding: 30px 230px 40px 30px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border: 2px solid #085ca3;
+        position: relative;
+        &_icon {
+          padding-left: 57px;
+        }
+        & + .info__panel {
+          margin-top: 30px;
+        }
+        & .text {
+          font-family: "Montserrat", sans-serif;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          text-align: left;
+          color: #000;
+          margin-bottom: 10px;
+        }
+        & .title {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: left;
+          color: #000;
+          margin-bottom: 10px;
+        }
+        & .icon {
+          position: absolute;
+          top: 50%;
+          left: -37px;
+          transform: translateY(-50%);
+          width: 74px;
+          height: 74px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border: 2px solid #085ca3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          background-color: #fff;
+        }
+      }
+      &__textarea {
+        padding: 32px 30px;
+        border: 1px solid #085ca3;
+        min-height: 166px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

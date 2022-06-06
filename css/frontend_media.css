@@ -225,6 +225,58 @@
     border-left: none;
     margin-top: 25px;
   }
+  .timeline {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .timeline__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: relative;
+  }
+  .timeline__place {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-right: 0;
+    padding-top: 0;
+  }
+  .timeline__icon {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .timeline__desc {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-left: auto;
+    text-align: right;
+  }
+  .timeline__desc .text {
+    text-align: right;
+  }
+  .timeline__desc .actions {
+    text-align: right;
+  }
+  .timeline .add_favorite {
+    top: auto;
+    bottom: 74px;
+  }
+  .timeline__icon::before,
+  .timeline__icon::after {
+    height: calc(100% - 74px);
+  }
+  .header__nav {
+    z-index: 2;
+  }
 }
 
 /* === MOBILE FIRST === */

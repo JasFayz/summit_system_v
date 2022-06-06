@@ -23,279 +23,279 @@
 </head>
 
 <body>
-    <div id="app" class="app">
-        <header class="header">
-            <div class="container header__container">
-                <div class="header__top">
-                    <a href="#" class="header__logo">
-                        <div class="icon">
-                            <img src="./images/front_logo.svg" alt="">
+        <div id="app" class="app">
+            <header class="header">
+                <div class="container header__container">
+                    <div class="header__top">
+                        <a href="#" class="header__logo">
+                            <div class="icon">
+                                <img src="./images/front_logo.svg" alt="">
+                            </div>
+                            <div class="text">Единая платформа форумов и мероприятий</div>
+                        </a>
+                        <div class="nav nav__lang">
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Уз</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Ру</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">En</a>
+                            </li>
                         </div>
-                        <div class="text">Единая платформа форумов и мероприятий</div>
-                    </a>
-                    <div class="nav nav__lang">
-                        <li class="nav__item">
-                            <a href="" class="nav__link">Уз</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">Ру</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">En</a>
-                        </li>
                     </div>
-                </div>
-                <div class="header__nav">
-                    <ul class="nav" :class="{'show': mobileMenu}">
-                        <li class="nav__item">
-                            <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">О ПРОГРАММА</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">О УЧАСТНИКИ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">О НОВОСТИ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">О МЕДИА</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ</a>
-                        </li>
-                    </ul>
-                    <button class="btn header__mobile_btn" @click="handleMenuButton">
-						<div class="sandwich" :class="{'is-active': mobileMenu}">
-							<div class="sandwich__line sandwich__line--top"></div>
-							<div class="sandwich__line sandwich__line--middle"></div>
-							<div class="sandwich__line sandwich__line--bottom"></div>
-						</div>
-					</button>
-                </div>
-            </div>
-        </header>
-        <section class="banner">
-            <div class="container">
-                <div class="banner__container" style="background-image: url('./images/banner_bg.jpg');">
-                    <h3 class="banner__title">Система для регистрации и учёта участников Международной конференции</h3>
-                    <div class="banner__desc">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                    </div>
-                    <div class="banner__date">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" viewBox="0 0 27 30">
-							<path id="Icon_material-date-range" data-name="Icon material-date-range" d="M13.5,16.5h-3v3h3Zm6,0h-3v3h3Zm6,0h-3v3h3ZM28.5,6H27V3H24V6H12V3H9V6H7.5A2.986,2.986,0,0,0,4.515,9L4.5,30a3,3,0,0,0,3,3h21a3.009,3.009,0,0,0,3-3V9A3.009,3.009,0,0,0,28.5,6Zm0,24H7.5V13.5h21Z" transform="translate(-4.5 -3)" fill="#015ca3"/>
-						  </svg>
-                        <span> Дата: 3-4 апреля 2022 г. Ташкент</span>
-                    </div>
-                    <div class="banner__actions">
-                        <button class="btn button button__primary rounded-0 me-4">
-							<svg xmlns="http://www.w3.org/2000/svg" width="36.248" height="29" viewBox="0 0 36.248 29">
-								<path id="Icon_awesome-user-edit" data-name="Icon awesome-user-edit" d="M12.687,14.5a7.25,7.25,0,1,0-7.25-7.25A7.249,7.249,0,0,0,12.687,14.5Zm5.075,1.812h-.946a9.86,9.86,0,0,1-8.258,0H7.612A7.614,7.614,0,0,0,0,23.925v2.356A2.719,2.719,0,0,0,2.719,29h15.57a2.72,2.72,0,0,1-.147-1.206l.385-3.449.068-.629.447-.447,4.378-4.378a7.535,7.535,0,0,0-5.658-2.577Zm2.566,8.23L19.943,28a.9.9,0,0,0,1,1l3.449-.385L32.2,20.8l-4.061-4.061-7.811,7.8ZM35.853,15.23l-2.147-2.147a1.357,1.357,0,0,0-1.914,0l-2.141,2.141-.232.232,4.067,4.061,2.368-2.368a1.364,1.364,0,0,0,0-1.92Z" fill="#fff"/>
-							  </svg>
-							<span>Регистрация участников</span>
-						</button>
-                        <button class="btn button button__success__alt rounded-0">
-							<svg xmlns="http://www.w3.org/2000/svg" width="28.898" height="23.119" viewBox="0 0 28.898 23.119">
-								<path id="Icon_awesome-user-check" data-name="Icon awesome-user-check" d="M10.114,11.559a5.78,5.78,0,1,0-5.78-5.78A5.779,5.779,0,0,0,10.114,11.559ZM14.16,13h-.754a7.86,7.86,0,0,1-6.583,0H6.069A6.07,6.07,0,0,0,0,19.073v1.878a2.168,2.168,0,0,0,2.167,2.167H18.061a2.168,2.168,0,0,0,2.167-2.167V19.073A6.07,6.07,0,0,0,14.16,13Zm14.585-5.8L27.49,5.938a.536.536,0,0,0-.759,0L22,10.629,19.944,8.561a.536.536,0,0,0-.759,0l-1.269,1.26a.536.536,0,0,0,0,.759L21.6,14.291a.536.536,0,0,0,.759,0l6.38-6.331a.54.54,0,0,0,0-.759Z" fill="#fff"/>
-							  </svg>
-							<span>Проверка участников</span>
-							  
-						</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="streaming">
-            <div class="container">
-                <h3 class="streaming__title">ОНЛАЙН ТРАНСЛЯЦИЯ</h3>
-                <div class="streaming__container" style="background-image: url('./images/streaming_bg.jpg');">
-                    <div class="streaming__left">
-                        <button class="streaming__play_btn" @click="fsToggler = !fsToggler">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="93.429" height="93.429" viewBox="0 0 93.429 93.429">
-								<g id="Icon_feather-play-circle" data-name="Icon feather-play-circle" transform="translate(-1 -1)">
-								  <path id="Path_4859" data-name="Path 4859" d="M92.429,47.715A44.715,44.715,0,1,1,47.715,3,44.715,44.715,0,0,1,92.429,47.715Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-								  <path id="Path_4860" data-name="Path 4860" d="M15,12,41.829,29.886,15,47.772Z" transform="translate(23.772 17.829)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-								</g>
-							  </svg>
-                            <span>Смотреть</span>
+                    <div class="header__nav">
+                        <ul class="nav" :class="{'show': mobileMenu}">
+                            <li class="nav__item">
+                                <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">О ПРОГРАММА</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">О УЧАСТНИКИ</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">О НОВОСТИ</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">О МЕДИА</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ</a>
+                            </li>
+                        </ul>
+                        <button class="btn header__mobile_btn" @click="handleMenuButton">
+                            <div class="sandwich" :class="{'is-active': mobileMenu}">
+                                <div class="sandwich__line sandwich__line--top"></div>
+                                <div class="sandwich__line sandwich__line--middle"></div>
+                                <div class="sandwich__line sandwich__line--bottom"></div>
+                            </div>
                         </button>
                     </div>
-                    <div class="streaming__right">
-                        <h4 class="streaming__timer_title">
-                            <svg id="schedule_black_24dp" xmlns="http://www.w3.org/2000/svg" width="33.831" height="33.831" viewBox="0 0 33.831 33.831">
-								<path id="Path_4808" data-name="Path 4808" d="M0,0H33.831V33.831H0Z" fill="none"/>
-								<path id="Path_4809" data-name="Path 4809" d="M16.082,2a14.1,14.1,0,1,0,14.11,14.1A14.089,14.089,0,0,0,16.082,2ZM16.1,27.373A11.277,11.277,0,1,1,27.373,16.1,11.274,11.274,0,0,1,16.1,27.373Z" transform="translate(0.819 0.819)" fill="#f7f7f7"/>
-								<path id="Path_4810" data-name="Path 4810" d="M13.114,7H11v8.458l7.4,4.44,1.057-1.734L13.114,14.4Z" transform="translate(4.506 2.867)" fill="#f7f7f7"/>
-							  </svg>
-                            <span> ДО КОНФЕРЕНЦИИ ОСТАЛОСЬ:</span></h4>
-                        <div class="streaming__timer">
-                            <countdown :time="860000000" class="streaming__timer_container">
-                                <template slot-scope="props">
-									<div class="streaming__timer_cell">
-										<span class="value">{{ props.days }}</span>
-										<span class="name">Дней</span>
-									</div>
-									  : 
-									<div class="streaming__timer_cell">
-										<span class="value">{{ props.hours }}</span>
-										<span class="name">ЧАСОВ</span>
-									</div> 
-									 : 
-									 <div class="streaming__timer_cell">
-										<span class="value">{{ props.minutes }}</span>
-										<span class="name">МИНУТ</span>
-									</div> 
-									: 
-									<div class="streaming__timer_cell">
-										<span class="value">{{ props.seconds }}</span>
-										<span class="name">СЕКУНД</span>
-									</div> 
-								</template>
-                            </countdown>
-                        </div>
-                        <ul class="streaming__social">
-                            <li class="streaming__social_item">
-                                <a href="" class="streaming__social_link">
-                                    <svg id="Group_2042" data-name="Group 2042" xmlns="http://www.w3.org/2000/svg" width="92" height="24" viewBox="0 0 92 24">
-										<text id="facebook" transform="translate(22 17)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">FACEBOOK</tspan></text>
-										<path id="facebook-2" data-name="facebook" d="M16,3.985h2.191V.169A28.292,28.292,0,0,0,15,0C11.837,0,9.673,1.987,9.673,5.639V9H6.187v4.266H9.673V24h4.274V13.267h3.345L17.823,9H13.946V6.062c0-1.233.333-2.077,2.051-2.077Z" transform="translate(-6.187 0)" fill="#f7f7f7"/>
-									</svg>
-                                </a>
-                            </li>
-                            <li class="streaming__social_item">
-                                <a href="" class="streaming__social_link">
-                                    <svg id="Group_2043" data-name="Group 2043" xmlns="http://www.w3.org/2000/svg" width="101.771" height="20" viewBox="0 0 101.771 20">
-										<text id="TELEGRAM" transform="translate(33.771 15)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">TELEGRAM</tspan></text>
-										<path id="telegram-6" d="M9.417,15.181l-.4,5.584a1.388,1.388,0,0,0,1.109-.537l2.663-2.545,5.518,4.041c1.012.564,1.725.267,2-.931L23.93,3.821h0c.321-1.5-.541-2.081-1.527-1.714L1.114,10.257C-.339,10.821-.317,11.631.867,12L6.31,13.691,18.953,5.78c.595-.394,1.136-.176.691.218Z" transform="translate(0 -2)" fill="#f7f7f7"/>
-									</svg>
-
-                                </a>
-                            </li>
-                            <li class="streaming__social_item">
-                                <a href="" class="streaming__social_link">
-                                    <svg id="Group_2044" data-name="Group 2044" xmlns="http://www.w3.org/2000/svg" width="89.226" height="19.5" viewBox="0 0 89.226 19.5">
-										<text id="TWITTER" transform="translate(34.226 15)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">TWITTER</tspan></text>
-										<path id="twitter-2" data-name="twitter" d="M21.534,7.113A9.822,9.822,0,0,0,24,4.559h0a10.276,10.276,0,0,1-2.835.777A4.894,4.894,0,0,0,23.33,2.616a9.845,9.845,0,0,1-3.12,1.191A4.92,4.92,0,0,0,11.7,7.171a5.066,5.066,0,0,0,.114,1.122A13.93,13.93,0,0,1,1.671,3.146,4.92,4.92,0,0,0,3.183,9.722,4.863,4.863,0,0,1,.96,9.116V9.17A4.943,4.943,0,0,0,4.9,14.005a4.893,4.893,0,0,1-1.29.162,4.343,4.343,0,0,1-.931-.084,4.969,4.969,0,0,0,4.6,3.428,9.89,9.89,0,0,1-6.1,2.1A9.306,9.306,0,0,1,0,19.542,13.856,13.856,0,0,0,7.548,21.75,13.908,13.908,0,0,0,21.534,7.113Z" transform="translate(0 -2.25)" fill="#f7f7f7"/>
-									</svg>
-
-                                </a>
-                            </li>
-                            <li class="streaming__social_item">
-                                <a href="" class="streaming__social_link">
-                                    <svg id="Group_2045" data-name="Group 2045" xmlns="http://www.w3.org/2000/svg" width="94" height="17" viewBox="0 0 94 17">
-										<text id="YOUTUBE" transform="translate(34 13)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">YOUTUBE</tspan></text>
-										<path id="youtube-2" data-name="youtube" d="M23.469,5.929l.03.2a3.043,3.043,0,0,0-2.068-2.112l-.021-.005c-1.871-.508-9.4-.508-9.4-.508s-7.51-.01-9.4.508A3.044,3.044,0,0,0,.527,6.1l0,.021A33.454,33.454,0,0,0,.553,18.072l-.031-.2A3.043,3.043,0,0,0,2.59,19.986l.021,0c1.869.509,9.4.509,9.4.509s7.509,0,9.4-.509a3.043,3.043,0,0,0,2.084-2.1l0-.021a31.265,31.265,0,0,0,.5-5.648c0-.073,0-.147,0-.221s0-.149,0-.23a32.256,32.256,0,0,0-.531-5.846ZM9.608,15.651V8.358l6.266,3.652Z" transform="translate(0 -3.5)" fill="#f7f7f7"/>
-									</svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <fs-lightbox :toggler="fsToggler" :sources="[
-                        'https://www.youtube.com/watch?v=3nQNiWdeH2Q',
-                        ]" />
                 </div>
-            </div>
-        </section>
-        <section class="news">
-            <div class="container">
-                <div class="news__container">
-                    <a href="#" class="news__card">
-                        <div class="news__card_image">
-                            <img src="./images/news_1.jpg" alt="">
+            </header>
+            <section class="banner">
+                <div class="container">
+                    <div class="banner__container" style="background-image: url('./images/banner_bg.jpg');">
+                        <h3 class="banner__title">Система для регистрации и учёта участников Международной конференции</h3>
+                        <div class="banner__desc">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
                         </div>
-                        <div class="news__card_body">
-                            <div class="news__card_title">
-                                Заседание Совета Глав Государств-Членов Шанхайской Организации Сотрудничества
-                            </div>
-                            <div class="news__card_footer">
-                                <div class="views">645</div>
-                                <div class="date">Дек 01.2021</div>
-                            </div>
+                        <div class="banner__date">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" viewBox="0 0 27 30">
+                                <path id="Icon_material-date-range" data-name="Icon material-date-range" d="M13.5,16.5h-3v3h3Zm6,0h-3v3h3Zm6,0h-3v3h3ZM28.5,6H27V3H24V6H12V3H9V6H7.5A2.986,2.986,0,0,0,4.515,9L4.5,30a3,3,0,0,0,3,3h21a3.009,3.009,0,0,0,3-3V9A3.009,3.009,0,0,0,28.5,6Zm0,24H7.5V13.5h21Z" transform="translate(-4.5 -3)" fill="#015ca3"/>
+                            </svg>
+                            <span> Дата: 3-4 апреля 2022 г. Ташкент</span>
                         </div>
+                        <div class="banner__actions">
+                            <button class="btn button button__primary rounded-0 me-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36.248" height="29" viewBox="0 0 36.248 29">
+                                    <path id="Icon_awesome-user-edit" data-name="Icon awesome-user-edit" d="M12.687,14.5a7.25,7.25,0,1,0-7.25-7.25A7.249,7.249,0,0,0,12.687,14.5Zm5.075,1.812h-.946a9.86,9.86,0,0,1-8.258,0H7.612A7.614,7.614,0,0,0,0,23.925v2.356A2.719,2.719,0,0,0,2.719,29h15.57a2.72,2.72,0,0,1-.147-1.206l.385-3.449.068-.629.447-.447,4.378-4.378a7.535,7.535,0,0,0-5.658-2.577Zm2.566,8.23L19.943,28a.9.9,0,0,0,1,1l3.449-.385L32.2,20.8l-4.061-4.061-7.811,7.8ZM35.853,15.23l-2.147-2.147a1.357,1.357,0,0,0-1.914,0l-2.141,2.141-.232.232,4.067,4.061,2.368-2.368a1.364,1.364,0,0,0,0-1.92Z" fill="#fff"/>
+                                </svg>
+                                <span>Регистрация участников</span>
+                            </button>
+                            <button class="btn button button__success__alt rounded-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28.898" height="23.119" viewBox="0 0 28.898 23.119">
+                                    <path id="Icon_awesome-user-check" data-name="Icon awesome-user-check" d="M10.114,11.559a5.78,5.78,0,1,0-5.78-5.78A5.779,5.779,0,0,0,10.114,11.559ZM14.16,13h-.754a7.86,7.86,0,0,1-6.583,0H6.069A6.07,6.07,0,0,0,0,19.073v1.878a2.168,2.168,0,0,0,2.167,2.167H18.061a2.168,2.168,0,0,0,2.167-2.167V19.073A6.07,6.07,0,0,0,14.16,13Zm14.585-5.8L27.49,5.938a.536.536,0,0,0-.759,0L22,10.629,19.944,8.561a.536.536,0,0,0-.759,0l-1.269,1.26a.536.536,0,0,0,0,.759L21.6,14.291a.536.536,0,0,0,.759,0l6.38-6.331a.54.54,0,0,0,0-.759Z" fill="#fff"/>
+                                </svg>
+                                <span>Проверка участников</span>
+                                
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="streaming">
+                <div class="container">
+                    <h3 class="streaming__title">ОНЛАЙН ТРАНСЛЯЦИЯ</h3>
+                    <div class="streaming__container" style="background-image: url('./images/streaming_bg.jpg');">
+                        <div class="streaming__left">
+                            <button class="streaming__play_btn" @click="fsToggler = !fsToggler">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="93.429" height="93.429" viewBox="0 0 93.429 93.429">
+                                    <g id="Icon_feather-play-circle" data-name="Icon feather-play-circle" transform="translate(-1 -1)">
+                                    <path id="Path_4859" data-name="Path 4859" d="M92.429,47.715A44.715,44.715,0,1,1,47.715,3,44.715,44.715,0,0,1,92.429,47.715Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                    <path id="Path_4860" data-name="Path 4860" d="M15,12,41.829,29.886,15,47.772Z" transform="translate(23.772 17.829)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                    </g>
+                                </svg>
+                                <span>Смотреть</span>
+                            </button>
+                        </div>
+                        <div class="streaming__right">
+                            <h4 class="streaming__timer_title">
+                                <svg id="schedule_black_24dp" xmlns="http://www.w3.org/2000/svg" width="33.831" height="33.831" viewBox="0 0 33.831 33.831">
+                                    <path id="Path_4808" data-name="Path 4808" d="M0,0H33.831V33.831H0Z" fill="none"/>
+                                    <path id="Path_4809" data-name="Path 4809" d="M16.082,2a14.1,14.1,0,1,0,14.11,14.1A14.089,14.089,0,0,0,16.082,2ZM16.1,27.373A11.277,11.277,0,1,1,27.373,16.1,11.274,11.274,0,0,1,16.1,27.373Z" transform="translate(0.819 0.819)" fill="#f7f7f7"/>
+                                    <path id="Path_4810" data-name="Path 4810" d="M13.114,7H11v8.458l7.4,4.44,1.057-1.734L13.114,14.4Z" transform="translate(4.506 2.867)" fill="#f7f7f7"/>
+                                </svg>
+                                <span> ДО КОНФЕРЕНЦИИ ОСТАЛОСЬ:</span></h4>
+                            <div class="streaming__timer">
+                                <countdown :time="860000000" class="streaming__timer_container">
+                                    <template slot-scope="props">
+                                        <div class="streaming__timer_cell">
+                                            <span class="value">{{ props.days }}</span>
+                                            <span class="name">Дней</span>
+                                        </div>
+                                        : 
+                                        <div class="streaming__timer_cell">
+                                            <span class="value">{{ props.hours }}</span>
+                                            <span class="name">ЧАСОВ</span>
+                                        </div> 
+                                        : 
+                                        <div class="streaming__timer_cell">
+                                            <span class="value">{{ props.minutes }}</span>
+                                            <span class="name">МИНУТ</span>
+                                        </div> 
+                                        : 
+                                        <div class="streaming__timer_cell">
+                                            <span class="value">{{ props.seconds }}</span>
+                                            <span class="name">СЕКУНД</span>
+                                        </div> 
+                                    </template>
+                                </countdown>
+                            </div>
+                            <ul class="streaming__social">
+                                <li class="streaming__social_item">
+                                    <a href="" class="streaming__social_link">
+                                        <svg id="Group_2042" data-name="Group 2042" xmlns="http://www.w3.org/2000/svg" width="92" height="24" viewBox="0 0 92 24">
+                                            <text id="facebook" transform="translate(22 17)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">FACEBOOK</tspan></text>
+                                            <path id="facebook-2" data-name="facebook" d="M16,3.985h2.191V.169A28.292,28.292,0,0,0,15,0C11.837,0,9.673,1.987,9.673,5.639V9H6.187v4.266H9.673V24h4.274V13.267h3.345L17.823,9H13.946V6.062c0-1.233.333-2.077,2.051-2.077Z" transform="translate(-6.187 0)" fill="#f7f7f7"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="streaming__social_item">
+                                    <a href="" class="streaming__social_link">
+                                        <svg id="Group_2043" data-name="Group 2043" xmlns="http://www.w3.org/2000/svg" width="101.771" height="20" viewBox="0 0 101.771 20">
+                                            <text id="TELEGRAM" transform="translate(33.771 15)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">TELEGRAM</tspan></text>
+                                            <path id="telegram-6" d="M9.417,15.181l-.4,5.584a1.388,1.388,0,0,0,1.109-.537l2.663-2.545,5.518,4.041c1.012.564,1.725.267,2-.931L23.93,3.821h0c.321-1.5-.541-2.081-1.527-1.714L1.114,10.257C-.339,10.821-.317,11.631.867,12L6.31,13.691,18.953,5.78c.595-.394,1.136-.176.691.218Z" transform="translate(0 -2)" fill="#f7f7f7"/>
+                                        </svg>
 
-                    </a>
+                                    </a>
+                                </li>
+                                <li class="streaming__social_item">
+                                    <a href="" class="streaming__social_link">
+                                        <svg id="Group_2044" data-name="Group 2044" xmlns="http://www.w3.org/2000/svg" width="89.226" height="19.5" viewBox="0 0 89.226 19.5">
+                                            <text id="TWITTER" transform="translate(34.226 15)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">TWITTER</tspan></text>
+                                            <path id="twitter-2" data-name="twitter" d="M21.534,7.113A9.822,9.822,0,0,0,24,4.559h0a10.276,10.276,0,0,1-2.835.777A4.894,4.894,0,0,0,23.33,2.616a9.845,9.845,0,0,1-3.12,1.191A4.92,4.92,0,0,0,11.7,7.171a5.066,5.066,0,0,0,.114,1.122A13.93,13.93,0,0,1,1.671,3.146,4.92,4.92,0,0,0,3.183,9.722,4.863,4.863,0,0,1,.96,9.116V9.17A4.943,4.943,0,0,0,4.9,14.005a4.893,4.893,0,0,1-1.29.162,4.343,4.343,0,0,1-.931-.084,4.969,4.969,0,0,0,4.6,3.428,9.89,9.89,0,0,1-6.1,2.1A9.306,9.306,0,0,1,0,19.542,13.856,13.856,0,0,0,7.548,21.75,13.908,13.908,0,0,0,21.534,7.113Z" transform="translate(0 -2.25)" fill="#f7f7f7"/>
+                                        </svg>
+
+                                    </a>
+                                </li>
+                                <li class="streaming__social_item">
+                                    <a href="" class="streaming__social_link">
+                                        <svg id="Group_2045" data-name="Group 2045" xmlns="http://www.w3.org/2000/svg" width="94" height="17" viewBox="0 0 94 17">
+                                            <text id="YOUTUBE" transform="translate(34 13)" fill="#f7f7f7" font-size="12" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.025em"><tspan x="0" y="0">YOUTUBE</tspan></text>
+                                            <path id="youtube-2" data-name="youtube" d="M23.469,5.929l.03.2a3.043,3.043,0,0,0-2.068-2.112l-.021-.005c-1.871-.508-9.4-.508-9.4-.508s-7.51-.01-9.4.508A3.044,3.044,0,0,0,.527,6.1l0,.021A33.454,33.454,0,0,0,.553,18.072l-.031-.2A3.043,3.043,0,0,0,2.59,19.986l.021,0c1.869.509,9.4.509,9.4.509s7.509,0,9.4-.509a3.043,3.043,0,0,0,2.084-2.1l0-.021a31.265,31.265,0,0,0,.5-5.648c0-.073,0-.147,0-.221s0-.149,0-.23a32.256,32.256,0,0,0-.531-5.846ZM9.608,15.651V8.358l6.266,3.652Z" transform="translate(0 -3.5)" fill="#f7f7f7"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <fs-lightbox :toggler="fsToggler" :sources="[
+                            'https://www.youtube.com/watch?v=3nQNiWdeH2Q',
+                            ]" />
+                    </div>
                 </div>
-            </div>
-        </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__container">
-                    <div class="footer__nav">
-                        <div class="row ">
-                            <div class="col-md-6">
-                                <ul class="nav">
-                                    <li class="nav__item">
-                                        <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="" class="nav__link"> ПРОГРАММА</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="" class="nav__link"> УЧАСТНИКИ</a>
-                                    </li>
-                                </ul>
+            </section>
+            <section class="news">
+                <div class="container">
+                    <div class="news__container">
+                        <a href="#" class="news__card">
+                            <div class="news__card_image">
+                                <img src="./images/news_1.jpg" alt="">
                             </div>
-                            <div class="col-md-6">
-                                <ul class="nav">
-                                    <li class="nav__item">
-                                        <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="" class="nav__link"> ПРОГРАММА</a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="" class="nav__link"> УЧАСТНИКИ</a>
-                                    </li>
-                                </ul>
+                            <div class="news__card_body">
+                                <div class="news__card_title">
+                                    Заседание Совета Глав Государств-Членов Шанхайской Организации Сотрудничества
+                                </div>
+                                <div class="news__card_footer">
+                                    <div class="views">645</div>
+                                    <div class="date">Дек 01.2021</div>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__container">
+                        <div class="footer__nav">
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <ul class="nav">
+                                        <li class="nav__item">
+                                            <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a href="" class="nav__link"> ПРОГРАММА</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a href="" class="nav__link"> УЧАСТНИКИ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="nav">
+                                        <li class="nav__item">
+                                            <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a href="" class="nav__link"> ПРОГРАММА</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a href="" class="nav__link"> УЧАСТНИКИ</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                        <div class="footer__copyright">
+                            <p> Об использовании информации сайта Все материалы сайта председательства Республики Узбекистан в Шанхайской организации сотрудничества в 2022-2023 годах могут быть воспроизведены в любых средствах массовой информации, на серверах
+                                сети Интернет или на любых иных носителях без каких либо ограничений по объему и срокам публикации. </p>
+                            <p> Единственным условием использования является ссылка на первоисточник.</p>
+                        </div>
+                        <div class="footer__social">
+                            <div class="footer__social_title">Поделиться:</div>
+                            <ul class="footer__social_list">
+                                <li class="footer__social_item">
+                                    <a href="" class="footer__social_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="9.641" height="18" viewBox="0 0 9.641 18">
+                                            <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M10.618,10.125l.5-3.258H7.992V4.753a1.629,1.629,0,0,1,1.837-1.76H11.25V.22A17.329,17.329,0,0,0,8.728,0C6.153,0,4.471,1.56,4.471,4.385V6.867H1.609v3.258H4.471V18H7.992V10.125Z" transform="translate(-1.609)" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer__social_item">
+                                    <a href="" class="footer__social_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14.619" viewBox="0 0 18 14.619">
+                                            <path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M16.15,7.024c.011.16.011.32.011.48A10.424,10.424,0,0,1,5.665,18,10.425,10.425,0,0,1,0,16.344a7.632,7.632,0,0,0,.891.046,7.388,7.388,0,0,0,4.58-1.576,3.7,3.7,0,0,1-3.449-2.558,4.652,4.652,0,0,0,.7.057,3.9,3.9,0,0,0,.971-.126A3.69,3.69,0,0,1,.731,8.566V8.52A3.715,3.715,0,0,0,2.4,8.989,3.695,3.695,0,0,1,1.256,4.055a10.486,10.486,0,0,0,7.607,3.86,4.165,4.165,0,0,1-.091-.845,3.693,3.693,0,0,1,6.385-2.524A7.263,7.263,0,0,0,17.5,3.655a3.679,3.679,0,0,1-1.622,2.033A7.4,7.4,0,0,0,18,5.117a7.93,7.93,0,0,1-1.85,1.907Z" transform="translate(0 -3.381)" fill="#fff"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="footer__developer">
+                            <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" width="141.97" height="15.25" viewBox="0 0 141.97 15.25">
+                                <g id="_1645964464592" data-name=" 1645964464592">
+                                <path id="Path_104" data-name="Path 104" d="M222.127,15.157h-1.84l0-11.948-3.41,9a1.992,1.992,0,0,1-3.685,0L209.748,3.78,209.757,7v5.123h0v1.588a1.312,1.312,0,0,1-1.442,1.442h-1.552V1.789h0l0-.034,0-.033,0-.034.006-.033.006-.034.008-.033.008-.033.01-.033h0l.01-.033.011-.033.012-.032.013-.032.013-.033.015-.031.015-.032.016-.031.016-.031h0l.018-.031.018-.03h0l.018-.03.02-.03.02-.029h0l.021-.029h0l.022-.028h0L207.094,1h0l.022-.027.024-.027.024-.027.024-.026.025-.026h0l.025-.025.026-.025.027-.024h0l.027-.023.028-.023.028-.022L207.4.7h0l.028-.021h0l.029-.021h0l.029-.019.03-.019.03-.018.031-.018.031-.017.031-.016.031-.015h0l.032-.015.032-.014h0l.032-.013h0l.032-.012.033-.012h0l.033-.01.033-.01.033-.008.033-.007h0l.033-.007h0l.033-.005.034,0,.034,0,.033,0,.034,0h3.454l3.519,9.4,3.4-8.6a1.338,1.338,0,0,1,1.289-.8h3.73v13.3c0,.987-.4,1.44-1.443,1.442Z" transform="translate(-81.599 -0.163)" fill="#fff"/>
+                                <path id="Path_105" data-name="Path 105" d="M186.013,15.251a6.87,6.87,0,0,1-5.163-2.06,7.4,7.4,0,0,1-1.993-5.374,7.922,7.922,0,0,1,2.025-5.655A7.015,7.015,0,0,1,186.248,0a6.7,6.7,0,0,1,5.107,2.067A7.63,7.63,0,0,1,193.3,7.518a7.8,7.8,0,0,1-2.022,5.606,6.93,6.93,0,0,1-5.268,2.127Zm.144-12.39a3.336,3.336,0,0,0-2.777,1.313,5.47,5.47,0,0,0-1.028,3.468,5.388,5.388,0,0,0,1.028,3.468,3.294,3.294,0,0,0,2.692,1.274,3.335,3.335,0,0,0,2.728-1.239,5.32,5.32,0,0,0,1.007-3.44,5.762,5.762,0,0,0-.976-3.57A3.192,3.192,0,0,0,186.158,2.86Z" transform="translate(-70.586 0)" fill="#fff"/>
+                                <path id="Path_106" data-name="Path 106" d="M168.268,14.774a10.285,10.285,0,0,1-3.417.476,7.1,7.1,0,0,1-5.335-1.993,7.285,7.285,0,0,1-1.944-5.318A7.793,7.793,0,0,1,159.754,2.2,7.649,7.649,0,0,1,165.427,0a11.562,11.562,0,0,1,2.11.165c.87.152,1.511.446,1.53,1.5v.864c-.087.888-.827.8-1.232.677a7.139,7.139,0,0,0-2.141-.343,4.48,4.48,0,0,0-3.352,1.305A4.85,4.85,0,0,0,161.067,7.7a4.744,4.744,0,0,0,1.2,3.408,4.251,4.251,0,0,0,3.239,1.271,9.705,9.705,0,0,0,2.363-.423c.5-.111,1.195.116,1.193.649v.777C169.038,14.252,168.775,14.6,168.268,14.774Z" transform="translate(-62.185)" fill="#fff"/>
+                                <path id="Path_107" data-name="Path 107" d="M138.346,15.251a6.872,6.872,0,0,1-5.164-2.06,7.4,7.4,0,0,1-1.993-5.374,7.925,7.925,0,0,1,2.025-5.655A7.017,7.017,0,0,1,138.581,0a6.7,6.7,0,0,1,5.107,2.067,7.628,7.628,0,0,1,1.948,5.451,7.8,7.8,0,0,1-2.022,5.606,6.928,6.928,0,0,1-5.268,2.127Zm.143-12.39a3.334,3.334,0,0,0-2.776,1.313,5.466,5.466,0,0,0-1.028,3.468,5.385,5.385,0,0,0,1.028,3.468,3.293,3.293,0,0,0,2.692,1.274,3.334,3.334,0,0,0,2.727-1.239A5.316,5.316,0,0,0,142.14,7.7a5.762,5.762,0,0,0-.976-3.57A3.191,3.191,0,0,0,138.49,2.86Z" transform="translate(-51.774 0)" fill="#fff"/>
+                                <path id="Path_108" data-name="Path 108" d="M123.149,3.114h-5.2V6.737h3.337a1.553,1.553,0,0,1,1.444,1.444V9.429h-4.781v5.728h-1.88a1.553,1.553,0,0,1-1.444-1.444V.412H121.7a1.553,1.553,0,0,1,1.444,1.444V3.114Z" transform="translate(-45.236 -0.163)" fill="#fff"/>
+                                <path id="Path_109" data-name="Path 109" d="M98.621,15.16a2.281,2.281,0,0,1-2.133-.869l-5.512-8.4a13.874,13.874,0,0,1-.74-1.222H90.2c.053.519.081,1.317.081,2.383v6.978c0,.513-.358,1.126-.847,1.126H87.14V1.854A1.821,1.821,0,0,1,89.117.41a2.4,2.4,0,0,1,2.161.857l5.293,8.118c.267.407.513.807.741,1.2h.042a15.488,15.488,0,0,1-.084-2.025V1.842A1.552,1.552,0,0,1,98.72.41h1.687v13.3A1.647,1.647,0,0,1,98.621,15.16Z" transform="translate(-34.39 -0.161)" fill="#fff"/>
+                                <path id="Path_110" data-name="Path 110" d="M78,15.157h-1.88V1.856A1.553,1.553,0,0,1,77.561.412h1.88v13.3A1.553,1.553,0,0,1,78,15.157Z" transform="translate(-30.04 -0.163)" fill="#fff"/>
+                                <path id="Path_111" data-name="Path 111" d="M63.393,15.157h-9a1.48,1.48,0,0,1-.979-2.536L60.5,3.114H53.49V1.859A1.555,1.555,0,0,1,54.943.412H64.8A4.428,4.428,0,0,1,64.058,3.3L57.41,12.461h7.413v1.255A1.551,1.551,0,0,1,63.393,15.157Z" transform="translate(-20.915 -0.163)" fill="#fff"/>
+                                <path id="Path_112" data-name="Path 112" d="M41.751,8.772q0,6.639-6.188,6.641-6.007,0-6.006-6.486l0-7.07A1.35,1.35,0,0,1,31,.412h1.884V8.966q0,3.58,2.8,3.58,2.743,0,2.745-3.457V1.856A1.564,1.564,0,0,1,39.872.412h1.878Z" transform="translate(-11.665 -0.163)" fill="#fff"/>
+                                <path id="Path_113" data-name="Path 113" d="M14.638.443H1.923A1.929,1.929,0,0,0,0,2.366v.427a6.393,6.393,0,0,1,1.153.3A20.054,20.054,0,0,1,5.872,5.765,15.552,15.552,0,0,1,9.689,3.556c1.044-.37,1.854-.374,2.307.061.513.492.493,1.478.035,2.768A20.052,20.052,0,0,1,9.364,11.1a15.565,15.565,0,0,1,2.208,3.817c.019.054.037.107.054.159h1.089a1.929,1.929,0,0,0,1.923-1.923ZM0,8.516v4.642a1.926,1.926,0,0,0,.989,1.679A4.533,4.533,0,0,0,2.6,14.519a18.71,18.71,0,0,0,4.538-2.651.032.032,0,0,1,.044.006.031.031,0,0,1,0,.041h0c-.482.46-.963.9-1.437,1.3s-.959.8-1.425,1.159h0l-.272.205h0q-.35.262-.691.5H9.285c.439-.506.415-1.4,0-2.551A18.69,18.69,0,0,0,6.635,7.992a.031.031,0,0,1,.048-.041h0c.46.482.9.964,1.3,1.438s.781.933,1.129,1.386a11.009,11.009,0,0,0,1.13-3.059A2.055,2.055,0,0,0,9.914,5.9c-.492-.5-1.412-.5-2.617-.062a18.727,18.727,0,0,0-4.538,2.65.031.031,0,0,1-.044-.006.031.031,0,0,1,0-.041h0q.724-.69,1.437-1.3c.469-.4.933-.782,1.386-1.13a11.032,11.032,0,0,0-3.059-1.13,2.05,2.05,0,0,0-1.811.331c-.5.492-.5,1.412-.062,2.617A18.7,18.7,0,0,0,3.26,12.368a.031.031,0,0,1-.007.044.031.031,0,0,1-.041,0h0c-.459-.482-.895-.963-1.3-1.437s-.8-.959-1.159-1.425h0L.545,9.275h0Q.257,8.889,0,8.516Z" transform="translate(0 -0.175)" fill="#fff" fill-rule="evenodd"/>
+                                </g>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="footer__copyright">
-                        <p> Об использовании информации сайта Все материалы сайта председательства Республики Узбекистан в Шанхайской организации сотрудничества в 2022-2023 годах могут быть воспроизведены в любых средствах массовой информации, на серверах
-                            сети Интернет или на любых иных носителях без каких либо ограничений по объему и срокам публикации. </p>
-                        <p> Единственным условием использования является ссылка на первоисточник.</p>
-                    </div>
-                    <div class="footer__social">
-                        <div class="footer__social_title">Поделиться:</div>
-                        <ul class="footer__social_list">
-                            <li class="footer__social_item">
-                                <a href="" class="footer__social_link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9.641" height="18" viewBox="0 0 9.641 18">
-										<path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M10.618,10.125l.5-3.258H7.992V4.753a1.629,1.629,0,0,1,1.837-1.76H11.25V.22A17.329,17.329,0,0,0,8.728,0C6.153,0,4.471,1.56,4.471,4.385V6.867H1.609v3.258H4.471V18H7.992V10.125Z" transform="translate(-1.609)" fill="#fff"/>
-									  </svg>
-                                </a>
-                            </li>
-                            <li class="footer__social_item">
-                                <a href="" class="footer__social_link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14.619" viewBox="0 0 18 14.619">
-										<path id="Icon_awesome-twitter" data-name="Icon awesome-twitter" d="M16.15,7.024c.011.16.011.32.011.48A10.424,10.424,0,0,1,5.665,18,10.425,10.425,0,0,1,0,16.344a7.632,7.632,0,0,0,.891.046,7.388,7.388,0,0,0,4.58-1.576,3.7,3.7,0,0,1-3.449-2.558,4.652,4.652,0,0,0,.7.057,3.9,3.9,0,0,0,.971-.126A3.69,3.69,0,0,1,.731,8.566V8.52A3.715,3.715,0,0,0,2.4,8.989,3.695,3.695,0,0,1,1.256,4.055a10.486,10.486,0,0,0,7.607,3.86,4.165,4.165,0,0,1-.091-.845,3.693,3.693,0,0,1,6.385-2.524A7.263,7.263,0,0,0,17.5,3.655a3.679,3.679,0,0,1-1.622,2.033A7.4,7.4,0,0,0,18,5.117a7.93,7.93,0,0,1-1.85,1.907Z" transform="translate(0 -3.381)" fill="#fff"/>
-									  </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="#" class="footer__developer">
-                        <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" width="141.97" height="15.25" viewBox="0 0 141.97 15.25">
-							<g id="_1645964464592" data-name=" 1645964464592">
-							  <path id="Path_104" data-name="Path 104" d="M222.127,15.157h-1.84l0-11.948-3.41,9a1.992,1.992,0,0,1-3.685,0L209.748,3.78,209.757,7v5.123h0v1.588a1.312,1.312,0,0,1-1.442,1.442h-1.552V1.789h0l0-.034,0-.033,0-.034.006-.033.006-.034.008-.033.008-.033.01-.033h0l.01-.033.011-.033.012-.032.013-.032.013-.033.015-.031.015-.032.016-.031.016-.031h0l.018-.031.018-.03h0l.018-.03.02-.03.02-.029h0l.021-.029h0l.022-.028h0L207.094,1h0l.022-.027.024-.027.024-.027.024-.026.025-.026h0l.025-.025.026-.025.027-.024h0l.027-.023.028-.023.028-.022L207.4.7h0l.028-.021h0l.029-.021h0l.029-.019.03-.019.03-.018.031-.018.031-.017.031-.016.031-.015h0l.032-.015.032-.014h0l.032-.013h0l.032-.012.033-.012h0l.033-.01.033-.01.033-.008.033-.007h0l.033-.007h0l.033-.005.034,0,.034,0,.033,0,.034,0h3.454l3.519,9.4,3.4-8.6a1.338,1.338,0,0,1,1.289-.8h3.73v13.3c0,.987-.4,1.44-1.443,1.442Z" transform="translate(-81.599 -0.163)" fill="#fff"/>
-							  <path id="Path_105" data-name="Path 105" d="M186.013,15.251a6.87,6.87,0,0,1-5.163-2.06,7.4,7.4,0,0,1-1.993-5.374,7.922,7.922,0,0,1,2.025-5.655A7.015,7.015,0,0,1,186.248,0a6.7,6.7,0,0,1,5.107,2.067A7.63,7.63,0,0,1,193.3,7.518a7.8,7.8,0,0,1-2.022,5.606,6.93,6.93,0,0,1-5.268,2.127Zm.144-12.39a3.336,3.336,0,0,0-2.777,1.313,5.47,5.47,0,0,0-1.028,3.468,5.388,5.388,0,0,0,1.028,3.468,3.294,3.294,0,0,0,2.692,1.274,3.335,3.335,0,0,0,2.728-1.239,5.32,5.32,0,0,0,1.007-3.44,5.762,5.762,0,0,0-.976-3.57A3.192,3.192,0,0,0,186.158,2.86Z" transform="translate(-70.586 0)" fill="#fff"/>
-							  <path id="Path_106" data-name="Path 106" d="M168.268,14.774a10.285,10.285,0,0,1-3.417.476,7.1,7.1,0,0,1-5.335-1.993,7.285,7.285,0,0,1-1.944-5.318A7.793,7.793,0,0,1,159.754,2.2,7.649,7.649,0,0,1,165.427,0a11.562,11.562,0,0,1,2.11.165c.87.152,1.511.446,1.53,1.5v.864c-.087.888-.827.8-1.232.677a7.139,7.139,0,0,0-2.141-.343,4.48,4.48,0,0,0-3.352,1.305A4.85,4.85,0,0,0,161.067,7.7a4.744,4.744,0,0,0,1.2,3.408,4.251,4.251,0,0,0,3.239,1.271,9.705,9.705,0,0,0,2.363-.423c.5-.111,1.195.116,1.193.649v.777C169.038,14.252,168.775,14.6,168.268,14.774Z" transform="translate(-62.185)" fill="#fff"/>
-							  <path id="Path_107" data-name="Path 107" d="M138.346,15.251a6.872,6.872,0,0,1-5.164-2.06,7.4,7.4,0,0,1-1.993-5.374,7.925,7.925,0,0,1,2.025-5.655A7.017,7.017,0,0,1,138.581,0a6.7,6.7,0,0,1,5.107,2.067,7.628,7.628,0,0,1,1.948,5.451,7.8,7.8,0,0,1-2.022,5.606,6.928,6.928,0,0,1-5.268,2.127Zm.143-12.39a3.334,3.334,0,0,0-2.776,1.313,5.466,5.466,0,0,0-1.028,3.468,5.385,5.385,0,0,0,1.028,3.468,3.293,3.293,0,0,0,2.692,1.274,3.334,3.334,0,0,0,2.727-1.239A5.316,5.316,0,0,0,142.14,7.7a5.762,5.762,0,0,0-.976-3.57A3.191,3.191,0,0,0,138.49,2.86Z" transform="translate(-51.774 0)" fill="#fff"/>
-							  <path id="Path_108" data-name="Path 108" d="M123.149,3.114h-5.2V6.737h3.337a1.553,1.553,0,0,1,1.444,1.444V9.429h-4.781v5.728h-1.88a1.553,1.553,0,0,1-1.444-1.444V.412H121.7a1.553,1.553,0,0,1,1.444,1.444V3.114Z" transform="translate(-45.236 -0.163)" fill="#fff"/>
-							  <path id="Path_109" data-name="Path 109" d="M98.621,15.16a2.281,2.281,0,0,1-2.133-.869l-5.512-8.4a13.874,13.874,0,0,1-.74-1.222H90.2c.053.519.081,1.317.081,2.383v6.978c0,.513-.358,1.126-.847,1.126H87.14V1.854A1.821,1.821,0,0,1,89.117.41a2.4,2.4,0,0,1,2.161.857l5.293,8.118c.267.407.513.807.741,1.2h.042a15.488,15.488,0,0,1-.084-2.025V1.842A1.552,1.552,0,0,1,98.72.41h1.687v13.3A1.647,1.647,0,0,1,98.621,15.16Z" transform="translate(-34.39 -0.161)" fill="#fff"/>
-							  <path id="Path_110" data-name="Path 110" d="M78,15.157h-1.88V1.856A1.553,1.553,0,0,1,77.561.412h1.88v13.3A1.553,1.553,0,0,1,78,15.157Z" transform="translate(-30.04 -0.163)" fill="#fff"/>
-							  <path id="Path_111" data-name="Path 111" d="M63.393,15.157h-9a1.48,1.48,0,0,1-.979-2.536L60.5,3.114H53.49V1.859A1.555,1.555,0,0,1,54.943.412H64.8A4.428,4.428,0,0,1,64.058,3.3L57.41,12.461h7.413v1.255A1.551,1.551,0,0,1,63.393,15.157Z" transform="translate(-20.915 -0.163)" fill="#fff"/>
-							  <path id="Path_112" data-name="Path 112" d="M41.751,8.772q0,6.639-6.188,6.641-6.007,0-6.006-6.486l0-7.07A1.35,1.35,0,0,1,31,.412h1.884V8.966q0,3.58,2.8,3.58,2.743,0,2.745-3.457V1.856A1.564,1.564,0,0,1,39.872.412h1.878Z" transform="translate(-11.665 -0.163)" fill="#fff"/>
-							  <path id="Path_113" data-name="Path 113" d="M14.638.443H1.923A1.929,1.929,0,0,0,0,2.366v.427a6.393,6.393,0,0,1,1.153.3A20.054,20.054,0,0,1,5.872,5.765,15.552,15.552,0,0,1,9.689,3.556c1.044-.37,1.854-.374,2.307.061.513.492.493,1.478.035,2.768A20.052,20.052,0,0,1,9.364,11.1a15.565,15.565,0,0,1,2.208,3.817c.019.054.037.107.054.159h1.089a1.929,1.929,0,0,0,1.923-1.923ZM0,8.516v4.642a1.926,1.926,0,0,0,.989,1.679A4.533,4.533,0,0,0,2.6,14.519a18.71,18.71,0,0,0,4.538-2.651.032.032,0,0,1,.044.006.031.031,0,0,1,0,.041h0c-.482.46-.963.9-1.437,1.3s-.959.8-1.425,1.159h0l-.272.205h0q-.35.262-.691.5H9.285c.439-.506.415-1.4,0-2.551A18.69,18.69,0,0,0,6.635,7.992a.031.031,0,0,1,.048-.041h0c.46.482.9.964,1.3,1.438s.781.933,1.129,1.386a11.009,11.009,0,0,0,1.13-3.059A2.055,2.055,0,0,0,9.914,5.9c-.492-.5-1.412-.5-2.617-.062a18.727,18.727,0,0,0-4.538,2.65.031.031,0,0,1-.044-.006.031.031,0,0,1,0-.041h0q.724-.69,1.437-1.3c.469-.4.933-.782,1.386-1.13a11.032,11.032,0,0,0-3.059-1.13,2.05,2.05,0,0,0-1.811.331c-.5.492-.5,1.412-.062,2.617A18.7,18.7,0,0,0,3.26,12.368a.031.031,0,0,1-.007.044.031.031,0,0,1-.041,0h0c-.459-.482-.895-.963-1.3-1.437s-.8-.959-1.159-1.425h0L.545,9.275h0Q.257,8.889,0,8.516Z" transform="translate(0 -0.175)" fill="#fff" fill-rule="evenodd"/>
-							</g>
-						</svg>
-                    </a>
                 </div>
-            </div>
-        </footer>
-    </div>
+            </footer>
+        </div>
 
     <script src="./js/vue-coutdown.js"></script>
     <script src="./js/fslightbox.umd.js"></script>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <base href="/"> -->
+
+    <title>Simple Starter</title>
+    <meta name="description" content="Simple Starter Description" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/image.jpg" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/frontend.css" />
+    <link rel="stylesheet" href="css/frontend_media.css" />
+  </head>
+
+  <body>
+    <div id="app" class="app">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__top">
+            <a href="#" class="header__logo">
+              <div class="icon">
+                <img src="./images/front_logo.svg" alt="" />
+              </div>
+              <div class="text">Единая платформа форумов и мероприятий</div>
+            </a>
+            <div class="nav nav__lang">
+              <li class="nav__item">
+                <a href="" class="nav__link">Уз</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Ру</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">En</a>
+              </li>
+            </div>
+          </div>
+          <div class="header__nav">
+            <ul class="nav" :class="{'show': mobileMenu}">
+              <li class="nav__item">
+                <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">О ПРОГРАММА</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">О УЧАСТНИКИ</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">О НОВОСТИ</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">О МЕДИА</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ</a>
+              </li>
+            </ul>
+            <button class="btn header__mobile_btn" @click="handleMenuButton">
+              <div class="sandwich" :class="{'is-active': mobileMenu}">
+                <div class="sandwich__line sandwich__line--top"></div>
+                <div class="sandwich__line sandwich__line--middle"></div>
+                <div class="sandwich__line sandwich__line--bottom"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </header>
+      <section class="program">
+        <h3 class="program__info_title text-center">
+          Прибытие в Ташкент 11:45 (Chinese Eastern CE 1668 Пекин -Ташкент)
+        </h3>
+
+        <div class="program__info_tab">
+          <ul class="nav nav-tabs info__tab_nav" id="myTab" role="tablist">
+            <li class="nav-item info__tab_nav__item" role="presentation">
+              <button
+                class="nav-link info__tab_nav__link"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                <span class="icon">
+                  <svg
+                    id="home_black_24dp_1_"
+                    data-name="home_black_24dp (1)"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                  >
+                    <path
+                      id="Контур_10231"
+                      data-name="Контур 10231"
+                      d="M0,0H38V38H0Z"
+                      fill="none"
+                    />
+                    <path
+                      id="Контур_10232"
+                      data-name="Контур 10232"
+                      d="M17.833,7.259l7.917,7.125V26.75H22.583v-9.5h-9.5v9.5H9.917V14.384l7.917-7.125m0-4.259L2,17.25H6.75V29.917h9.5v-9.5h3.167v9.5h9.5V17.25h4.75Z"
+                      transform="translate(1.167 1.75)"
+                      fill="#000000"
+                    />
+                  </svg>
+                </span>
+                <span class="text">Информация</span>
+              </button>
+            </li>
+            <li class="nav-item info__tab_nav__item" role="presentation">
+              <button
+                class="nav-link info__tab_nav__link active"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                <span class="icon">
+                  <svg
+                    id="contact_support_black_24dp"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="31.573"
+                    height="31.573"
+                    viewBox="0 0 31.573 31.573"
+                  >
+                    <path
+                      id="Контур_10233"
+                      data-name="Контур 10233"
+                      d="M0,0H31.573V31.573H0Z"
+                      fill="none"
+                    />
+                    <path
+                      id="Контур_10234"
+                      data-name="Контур 10234"
+                      d="M13.84,30.718V25.982A12.5,12.5,0,1,1,27,13.5C27,20.01,22.47,26.561,15.721,29.81ZM14.5,3.631a9.867,9.867,0,0,0,0,19.733h1.973V26.39c4.789-3.026,7.893-8,7.893-12.892A9.87,9.87,0,0,0,14.5,3.631ZM13.182,18.76h2.631v2.631H13.182Zm2.631-1.973H13.182c0-4.276,3.947-3.947,3.947-6.578a2.631,2.631,0,1,0-5.262,0H9.235a5.262,5.262,0,1,1,10.524,0C19.76,13.5,15.813,13.827,15.813,16.786Z"
+                      transform="translate(0.631 0.316)"
+                    />
+                  </svg>
+                </span>
+                <span class="text">Спросить</span>
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content info__tab_content" id="myTabContent">
+            <div
+              class="tab-pane info__tab_pane fade"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <div class="info__container container-lg">
+                <div class="info__panel info__panel_icon">
+                  <div class="icon">
+                    <svg
+                      id="departure_board_black_24dp"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32.997"
+                      height="32.997"
+                      viewBox="0 0 32.997 32.997"
+                    >
+                      <path
+                        id="Контур_10225"
+                        data-name="Контур 10225"
+                        d="M0,0H33V33H0Z"
+                        fill="none"
+                      />
+                      <circle
+                        id="Эллипс_3075"
+                        data-name="Эллипс 3075"
+                        cx="2"
+                        cy="2"
+                        r="2"
+                        transform="translate(5.498 20.499)"
+                        fill="#085ca3"
+                      />
+                      <circle
+                        id="Эллипс_3076"
+                        data-name="Эллипс 3076"
+                        cx="2"
+                        cy="2"
+                        r="2"
+                        transform="translate(15.498 20.499)"
+                        fill="#085ca3"
+                      />
+                      <path
+                        id="Контур_10226"
+                        data-name="Контур 10226"
+                        d="M21.623,1a9.6,9.6,0,0,0-7.906,4.152c-.564-.014-1.127-.027-1.719-.027-6.077,0-11,.687-11,5.5V24.373a4.105,4.105,0,0,0,1.375,3.052v2.447A1.379,1.379,0,0,0,3.75,31.247H5.125A1.379,1.379,0,0,0,6.5,29.872V28.5h11v1.375a1.379,1.379,0,0,0,1.375,1.375h1.375a1.379,1.379,0,0,0,1.375-1.375V27.425A4.105,4.105,0,0,0,23,24.373V20.138A9.618,9.618,0,0,0,21.623,1ZM12,7.874h.4a11.4,11.4,0,0,0-.289,1.361H4.217C4.973,8.507,6.926,7.874,12,7.874ZM3.75,11.985h8.359a9.654,9.654,0,0,0,1.622,4.138H3.75Zm16.5,12.388a1.331,1.331,0,0,1-.467,1l-.4.371H4.616l-.4-.371a1.331,1.331,0,0,1-.467-1v-5.5H16.687a9.354,9.354,0,0,0,3.561,1.265ZM21.623,17.5A6.874,6.874,0,1,1,28.5,10.624,6.877,6.877,0,0,1,21.623,17.5Zm.687-12.374H20.248V12l4.977,2.97,1.031-1.691-3.946-2.31Z"
+                        transform="translate(0.375 0.375)"
+                        fill="#085ca3"
+                      />
+                    </svg>
+                  </div>
+                  <div class="time">14:45</div>
+                  <div class="title">
+                    Прибытие в Ташкент 11:45 (Chinese Eastern CE 1668 Пекин
+                    -Ташкент)
+                  </div>
+                  <div class="text">Ташкентский аэропорт имени И.Каримова</div>
+                </div>
+                <div class="info__panel">
+                  <div class="text">
+                    В зале прилета водитель встречает с табличкой SCO Summit
+                    2022. Трансфер из аэропорта в отель Hyatt Regency Tashkent
+                    (Адрес: ул. Навои 1А) hyatt.com Регистрация в гостинице.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade show active"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <div class="info__container container-lg">
+                <textarea
+                  class="form-control info__textarea"
+                  placeholder="Поделиться мнением и спросить"
+                ></textarea>
+                <div class="text-right">
+                  <button class="btn button button__primary">Отправить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <div class="footer__nav">
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="nav">
+                    <li class="nav__item">
+                      <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link"> ПРОГРАММА</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link"> УЧАСТНИКИ</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="nav">
+                    <li class="nav__item">
+                      <a href="" class="nav__link">О КОНФЕРЕНЦИИ</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link"> ПРОГРАММА</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link"> УЧАСТНИКИ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer__copyright">
+              <p>
+                Об использовании информации сайта Все материалы сайта
+                председательства Республики Узбекистан в Шанхайской организации
+                сотрудничества в 2022-2023 годах могут быть воспроизведены в
+                любых средствах массовой информации, на серверах сети Интернет
+                или на любых иных носителях без каких либо ограничений по объему
+                и срокам публикации.
+              </p>
+              <p>
+                Единственным условием использования является ссылка на
+                первоисточник.
+              </p>
+            </div>
+            <div class="footer__social">
+              <div class="footer__social_title">Поделиться:</div>
+              <ul class="footer__social_list">
+                <li class="footer__social_item">
+                  <a href="" class="footer__social_link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="9.641"
+                      height="18"
+                      viewBox="0 0 9.641 18"
+                    >
+                      <path
+                        id="Icon_awesome-facebook-f"
+                        data-name="Icon awesome-facebook-f"
+                        d="M10.618,10.125l.5-3.258H7.992V4.753a1.629,1.629,0,0,1,1.837-1.76H11.25V.22A17.329,17.329,0,0,0,8.728,0C6.153,0,4.471,1.56,4.471,4.385V6.867H1.609v3.258H4.471V18H7.992V10.125Z"
+                        transform="translate(-1.609)"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__social_item">
+                  <a href="" class="footer__social_link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="14.619"
+                      viewBox="0 0 18 14.619"
+                    >
+                      <path
+                        id="Icon_awesome-twitter"
+                        data-name="Icon awesome-twitter"
+                        d="M16.15,7.024c.011.16.011.32.011.48A10.424,10.424,0,0,1,5.665,18,10.425,10.425,0,0,1,0,16.344a7.632,7.632,0,0,0,.891.046,7.388,7.388,0,0,0,4.58-1.576,3.7,3.7,0,0,1-3.449-2.558,4.652,4.652,0,0,0,.7.057,3.9,3.9,0,0,0,.971-.126A3.69,3.69,0,0,1,.731,8.566V8.52A3.715,3.715,0,0,0,2.4,8.989,3.695,3.695,0,0,1,1.256,4.055a10.486,10.486,0,0,0,7.607,3.86,4.165,4.165,0,0,1-.091-.845,3.693,3.693,0,0,1,6.385-2.524A7.263,7.263,0,0,0,17.5,3.655a3.679,3.679,0,0,1-1.622,2.033A7.4,7.4,0,0,0,18,5.117a7.93,7.93,0,0,1-1.85,1.907Z"
+                        transform="translate(0 -3.381)"
+                        fill="#fff"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="footer__developer">
+              <svg
+                id="Слой_1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="141.97"
+                height="15.25"
+                viewBox="0 0 141.97 15.25"
+              >
+                <g id="_1645964464592" data-name=" 1645964464592">
+                  <path
+                    id="Path_104"
+                    data-name="Path 104"
+                    d="M222.127,15.157h-1.84l0-11.948-3.41,9a1.992,1.992,0,0,1-3.685,0L209.748,3.78,209.757,7v5.123h0v1.588a1.312,1.312,0,0,1-1.442,1.442h-1.552V1.789h0l0-.034,0-.033,0-.034.006-.033.006-.034.008-.033.008-.033.01-.033h0l.01-.033.011-.033.012-.032.013-.032.013-.033.015-.031.015-.032.016-.031.016-.031h0l.018-.031.018-.03h0l.018-.03.02-.03.02-.029h0l.021-.029h0l.022-.028h0L207.094,1h0l.022-.027.024-.027.024-.027.024-.026.025-.026h0l.025-.025.026-.025.027-.024h0l.027-.023.028-.023.028-.022L207.4.7h0l.028-.021h0l.029-.021h0l.029-.019.03-.019.03-.018.031-.018.031-.017.031-.016.031-.015h0l.032-.015.032-.014h0l.032-.013h0l.032-.012.033-.012h0l.033-.01.033-.01.033-.008.033-.007h0l.033-.007h0l.033-.005.034,0,.034,0,.033,0,.034,0h3.454l3.519,9.4,3.4-8.6a1.338,1.338,0,0,1,1.289-.8h3.73v13.3c0,.987-.4,1.44-1.443,1.442Z"
+                    transform="translate(-81.599 -0.163)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_105"
+                    data-name="Path 105"
+                    d="M186.013,15.251a6.87,6.87,0,0,1-5.163-2.06,7.4,7.4,0,0,1-1.993-5.374,7.922,7.922,0,0,1,2.025-5.655A7.015,7.015,0,0,1,186.248,0a6.7,6.7,0,0,1,5.107,2.067A7.63,7.63,0,0,1,193.3,7.518a7.8,7.8,0,0,1-2.022,5.606,6.93,6.93,0,0,1-5.268,2.127Zm.144-12.39a3.336,3.336,0,0,0-2.777,1.313,5.47,5.47,0,0,0-1.028,3.468,5.388,5.388,0,0,0,1.028,3.468,3.294,3.294,0,0,0,2.692,1.274,3.335,3.335,0,0,0,2.728-1.239,5.32,5.32,0,0,0,1.007-3.44,5.762,5.762,0,0,0-.976-3.57A3.192,3.192,0,0,0,186.158,2.86Z"
+                    transform="translate(-70.586 0)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_106"
+                    data-name="Path 106"
+                    d="M168.268,14.774a10.285,10.285,0,0,1-3.417.476,7.1,7.1,0,0,1-5.335-1.993,7.285,7.285,0,0,1-1.944-5.318A7.793,7.793,0,0,1,159.754,2.2,7.649,7.649,0,0,1,165.427,0a11.562,11.562,0,0,1,2.11.165c.87.152,1.511.446,1.53,1.5v.864c-.087.888-.827.8-1.232.677a7.139,7.139,0,0,0-2.141-.343,4.48,4.48,0,0,0-3.352,1.305A4.85,4.85,0,0,0,161.067,7.7a4.744,4.744,0,0,0,1.2,3.408,4.251,4.251,0,0,0,3.239,1.271,9.705,9.705,0,0,0,2.363-.423c.5-.111,1.195.116,1.193.649v.777C169.038,14.252,168.775,14.6,168.268,14.774Z"
+                    transform="translate(-62.185)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_107"
+                    data-name="Path 107"
+                    d="M138.346,15.251a6.872,6.872,0,0,1-5.164-2.06,7.4,7.4,0,0,1-1.993-5.374,7.925,7.925,0,0,1,2.025-5.655A7.017,7.017,0,0,1,138.581,0a6.7,6.7,0,0,1,5.107,2.067,7.628,7.628,0,0,1,1.948,5.451,7.8,7.8,0,0,1-2.022,5.606,6.928,6.928,0,0,1-5.268,2.127Zm.143-12.39a3.334,3.334,0,0,0-2.776,1.313,5.466,5.466,0,0,0-1.028,3.468,5.385,5.385,0,0,0,1.028,3.468,3.293,3.293,0,0,0,2.692,1.274,3.334,3.334,0,0,0,2.727-1.239A5.316,5.316,0,0,0,142.14,7.7a5.762,5.762,0,0,0-.976-3.57A3.191,3.191,0,0,0,138.49,2.86Z"
+                    transform="translate(-51.774 0)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_108"
+                    data-name="Path 108"
+                    d="M123.149,3.114h-5.2V6.737h3.337a1.553,1.553,0,0,1,1.444,1.444V9.429h-4.781v5.728h-1.88a1.553,1.553,0,0,1-1.444-1.444V.412H121.7a1.553,1.553,0,0,1,1.444,1.444V3.114Z"
+                    transform="translate(-45.236 -0.163)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_109"
+                    data-name="Path 109"
+                    d="M98.621,15.16a2.281,2.281,0,0,1-2.133-.869l-5.512-8.4a13.874,13.874,0,0,1-.74-1.222H90.2c.053.519.081,1.317.081,2.383v6.978c0,.513-.358,1.126-.847,1.126H87.14V1.854A1.821,1.821,0,0,1,89.117.41a2.4,2.4,0,0,1,2.161.857l5.293,8.118c.267.407.513.807.741,1.2h.042a15.488,15.488,0,0,1-.084-2.025V1.842A1.552,1.552,0,0,1,98.72.41h1.687v13.3A1.647,1.647,0,0,1,98.621,15.16Z"
+                    transform="translate(-34.39 -0.161)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_110"
+                    data-name="Path 110"
+                    d="M78,15.157h-1.88V1.856A1.553,1.553,0,0,1,77.561.412h1.88v13.3A1.553,1.553,0,0,1,78,15.157Z"
+                    transform="translate(-30.04 -0.163)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_111"
+                    data-name="Path 111"
+                    d="M63.393,15.157h-9a1.48,1.48,0,0,1-.979-2.536L60.5,3.114H53.49V1.859A1.555,1.555,0,0,1,54.943.412H64.8A4.428,4.428,0,0,1,64.058,3.3L57.41,12.461h7.413v1.255A1.551,1.551,0,0,1,63.393,15.157Z"
+                    transform="translate(-20.915 -0.163)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_112"
+                    data-name="Path 112"
+                    d="M41.751,8.772q0,6.639-6.188,6.641-6.007,0-6.006-6.486l0-7.07A1.35,1.35,0,0,1,31,.412h1.884V8.966q0,3.58,2.8,3.58,2.743,0,2.745-3.457V1.856A1.564,1.564,0,0,1,39.872.412h1.878Z"
+                    transform="translate(-11.665 -0.163)"
+                    fill="#fff"
+                  />
+                  <path
+                    id="Path_113"
+                    data-name="Path 113"
+                    d="M14.638.443H1.923A1.929,1.929,0,0,0,0,2.366v.427a6.393,6.393,0,0,1,1.153.3A20.054,20.054,0,0,1,5.872,5.765,15.552,15.552,0,0,1,9.689,3.556c1.044-.37,1.854-.374,2.307.061.513.492.493,1.478.035,2.768A20.052,20.052,0,0,1,9.364,11.1a15.565,15.565,0,0,1,2.208,3.817c.019.054.037.107.054.159h1.089a1.929,1.929,0,0,0,1.923-1.923ZM0,8.516v4.642a1.926,1.926,0,0,0,.989,1.679A4.533,4.533,0,0,0,2.6,14.519a18.71,18.71,0,0,0,4.538-2.651.032.032,0,0,1,.044.006.031.031,0,0,1,0,.041h0c-.482.46-.963.9-1.437,1.3s-.959.8-1.425,1.159h0l-.272.205h0q-.35.262-.691.5H9.285c.439-.506.415-1.4,0-2.551A18.69,18.69,0,0,0,6.635,7.992a.031.031,0,0,1,.048-.041h0c.46.482.9.964,1.3,1.438s.781.933,1.129,1.386a11.009,11.009,0,0,0,1.13-3.059A2.055,2.055,0,0,0,9.914,5.9c-.492-.5-1.412-.5-2.617-.062a18.727,18.727,0,0,0-4.538,2.65.031.031,0,0,1-.044-.006.031.031,0,0,1,0-.041h0q.724-.69,1.437-1.3c.469-.4.933-.782,1.386-1.13a11.032,11.032,0,0,0-3.059-1.13,2.05,2.05,0,0,0-1.811.331c-.5.492-.5,1.412-.062,2.617A18.7,18.7,0,0,0,3.26,12.368a.031.031,0,0,1-.007.044.031.031,0,0,1-.041,0h0c-.459-.482-.895-.963-1.3-1.437s-.8-.959-1.159-1.425h0L.545,9.275h0Q.257,8.889,0,8.516Z"
+                    transform="translate(0 -0.175)"
+                    fill="#fff"
+                    fill-rule="evenodd"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/vue-coutdown.js"></script>
+    <script src="./js/fslightbox.umd.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Vue.component(VueCountdown.name, VueCountdown);
+    </script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            mobileMenu: false,
+            isPasswordShow: false,
+          };
+        },
+        computed: {
+          passFieldType() {
+            return this.isPasswordShow ? "text" : "password";
+          },
+        },
+        methods: {
+          handleMenuButton() {
+            this.mobileMenu = !this.mobileMenu;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
