@@ -277,6 +277,19 @@
   .header__nav {
     z-index: 2;
   }
+  .program {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .program__info_tab .info__tab_nav__item + .info__tab_nav__item {
+    margin-left: 15px;
+  }
+  .program__info_tab .info__panel {
+    padding: 15px 15px 20px 15px;
+  }
+  .program__info_tab .info__panel_icon {
+    padding-left: 57px;
+  }
 }
 
 /* === MOBILE FIRST === */
